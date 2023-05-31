@@ -28,9 +28,3 @@ function HomePage() {
                 <div id="home-next-games">
                     next games
                 </div>
-
-            </div>
-        </div>
-    );
-};
-export default HomePage;
