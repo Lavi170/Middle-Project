@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#payment-process{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.process-ball{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.process-bar{
+    width: 100px;
+    height: 25px;
+    background-color: grey;
+}

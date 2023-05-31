@@ -6,12 +6,16 @@ function Layout() {
             <nav className="nav-bar">
                 <button className="login-signup">Login </button>
                 <div className="right-side-nav-bar">
-                    <Link className="nav-link" >
+                    <Link className="nav-link" to={"HomePage"} >
                         Home 
                     </Link>
-                    <Link className="nav-link" >
+                    <Link className="nav-link" to={"Calender"} >
                         Calender
                     </Link>
+
+                    <div id="nav-logo" className="nav-link">
+                        LOGO 
+                    </div>
 
                     <Link className="nav-link" >
                         Teams
