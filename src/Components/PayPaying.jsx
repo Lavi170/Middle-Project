@@ -1,7 +1,6 @@
 import React from 'react'
 
-function PayPaying
- () {
+function PayPaying({ value, setValue }) {
   return (
     <div id='pay-paying-page'>
         <div id='pay-paying-grid'>
@@ -12,7 +11,6 @@ function PayPaying
             <div id='paying-grid-BTN'>pay</div>
             <div id='paying-grid-sentance'>statment</div>
         </div>
-        
     </div>
   )
 }

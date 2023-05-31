@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PayOrder () {
+function PayOrder ({ value, setValue }) {
   return (
     <div id='pay-order'>
         you chose-

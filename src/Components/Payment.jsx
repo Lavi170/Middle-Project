@@ -1,9 +1,10 @@
 import { Link, Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
+import './Payment.css'
 
-function Payment() {
+function Payment({ value, setValue }) {
     let [pageNumber, setPageNumber] = useState(1);
-    let [relleventPath, setRelleventPath] = useState("choice")
+    let [relleventPath, setRelleventPath] = useState("")
 
     useEffect(() => {
         if (pageNumber == 1) {
@@ -18,27 +19,28 @@ function Payment() {
             setRelleventPath("HomePage")
             setPageNumber(1)
         }
-    },[setPageNumber])
+    }, [pageNumber])
     return (
         <div id="payment-page">
             <div id="payment-process">
-                <div className="process-ball" id="process-first-ball"></div>
+                <div className="process-ball" id="process-first-ball">Choose</div>
                 <div className="process-bar" id="process-first-bar"></div>
-                <div className="process-ball" id="process-second-ball"></div>
+                <div className="process-ball" id="process-second-ball">Order</div>
                 <div className="process-bar" id="process-second-bar"></div>
-                <div className="process-ball" id="process-third-ball"></div>
+                <div className="process-ball" id="process-third-ball">Payment</div>
                 <div className="process-bar" id="process-third-bar"></div>
-                <div className="process-ball" id="process-fourth-ball"></div>
-                <div className="process-bar" id="process-fourth-bar"></div>
+                <div className="process-ball" id="process-fourth-ball">Receipt</div>
             </div>
-            <Link to={relleventPath}></Link>
+       
+                <Link to={relleventPath}></Link>
+
             <div id="payment-inner-page">
                 <Outlet></Outlet>
             </div>
 
             <div id="payment-buttons">
-                <button onClick={() => setPageNumber(pageNumber++)} className="payment-buttons-movemoent">back</button>
-                <button onClick={() => setPageNumber(pageNumber--)} className="payment-buttons-movemoent">next</button>
+                <button onClick={() => (setPageNumber(--pageNumber) )} className="payment-buttons-movemoent">back</button>
+                <button onClick={() => (setPageNumber(++pageNumber) + console.log(relleventPath + pageNumber))} className="payment-buttons-movemoent">next</button>
             </div>
         </div>
     );
