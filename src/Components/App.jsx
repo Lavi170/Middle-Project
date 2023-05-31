@@ -12,6 +12,7 @@ import data from './data.json'
 import Login from './Login';
 import SignUp from './SignUp'
 import UserPage from './UserPage'
+import ContactUs from './ContactUs';
 function App() {
   const [mainData, SetmainData] = useState([]);
   useEffect(() => {
@@ -25,11 +26,12 @@ function App() {
           <Route index element={<HomePage/>}></Route>
           <Route path='/Home' element={<HomePage  value={mainData} setValue={SetmainData}/>}></Route>
           <Route path='/Calender' element={<Calender  value={mainData} setValue={SetmainData}/>}></Route>
-          <Route path="/Teams" element={<Teams/>}></Route>
+          <Route path="/Teams" element={<Teams value={mainData} setValue={SetmainData}/>}></Route>
           <Route path='/About' element={<About/>}></Route>
+          <Route path='/contactus' element={<ContactUs/>}></Route>
           <Route path='*' element={<Notfound />}></Route>
           <Route path='userpage' element={<UserPage/>}>
-            <Route path='' element={<Login/>}></Route>
+            <Route path='login' element={<Login/>}></Route>
             <Route path='signup' element={<SignUp/>}></Route>
           </Route>
         </Route>
