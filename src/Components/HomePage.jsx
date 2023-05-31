@@ -1,4 +1,4 @@
-import video from "C:/Users/CyberPro3/Desktop/pureCoding/projects/Middle-Project-master/src/pictures/hero-section-video.mp4"
+import video from "/src/pictures/hero-section-video.mp4"
 import "./HomePage.css"
 function HomePage() {
 
