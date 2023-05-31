@@ -1,6 +1,7 @@
+
 import video from "/src/pictures/hero-section-video.mp4"
 import "./HomePage.css"
-function HomePage() {
+function HomePage({ value, setValue}) {
 
     return (
         <div id="home-page">
@@ -16,21 +17,16 @@ function HomePage() {
                 teams
             </div>
             <div id="home-center-grid">
+      <div id="home-teams">teams</div>
+      <div id="home-center-grid">
+        <div id="home-semi-calender">semi-calender</div>
 
-                <div id="home-semi-calender">
-                    semi-calender
-                </div>
+        <div id="home-contact-us">mini contact us</div>
 
-                <div id="home-contact-us">
-                    mini contact us 
-                </div>
+        <div id="home-next-games">next games</div>
+      </div>
+    </div>
+  );
+}
 
-                <div id="home-next-games">
-                    next games
-                </div>
-
-            </div>
-        </div>
-    );
-};
 export default HomePage;

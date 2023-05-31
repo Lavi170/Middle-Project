@@ -2,7 +2,7 @@ import React from 'react'
 import userData from "./Users.json"
 
 
-function Calender () {
+function Calender ({ value, setValue}) {
   // const numberArray = [];
   // let firstNam = 1;
   // let secondNam = 1;
