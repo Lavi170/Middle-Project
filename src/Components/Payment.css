@@ -4,7 +4,15 @@
     padding: 0;
 }
 
+#payment-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 #payment-process{
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -16,10 +24,33 @@
     height: 100px;
     border-radius: 50%;
     background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .process-bar{
     width: 100px;
     height: 25px;
     background-color: grey;
+}
+
+#payment-inner-page{
+    width: 70%;
+    height: 70%;
+    margin: 15px 15% 20px 15%;
+    padding: 30px;
+    border: 1px solid black;
+}
+
+#payment-buttons{
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+}
+
+#payment-buttons button{
+    font-size: x-large;
 }
