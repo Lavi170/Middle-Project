@@ -18,15 +18,15 @@ function Calender ({ value, setValue}) {
   //     }
   // }
 //   // console.log(numberArray);
-// console.log(userData);
-//   function pushNew(){
-//     const newObj={
-//       "first_name":"dani",
-//       "second_name":"prigo"
-//     }
-//     userData.registrated.push(newObj)
-//     console.log(userData);
-//   }
+console.log(userData);
+  function pushNew(){
+    const newObj={
+      "first_name":"dani",
+      "second_name":"prigo"
+    }
+    userData.registrated.push(newObj)
+    console.log(userData);
+  }
   
 
 
