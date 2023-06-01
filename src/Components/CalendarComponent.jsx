@@ -2,15 +2,13 @@ import React from 'react'
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction'
+import games from "./Calendar.json"
 // import { render } from '@fullcalendar/core/preact';
 // import { Calendar,formatDate } from '@fullcalendar/core';
 import { useState ,useEffect } from 'react';
 import timeGridPlugin from '@fullcalendar/timegrid'
  function CalendarComponent() {
-    const [events,setEvents]= useState([
-    { title:'event 1', start: '2023-05-31' },
-    { title: 'Event 2', start: '2023-06-01' },
-    { title: 'Event 3', start: '2023-06-09' },])
+    const [events,setEvents]= useState(games.matches[0])
     const handleDateSelect = (selectInfo) => {
       let title = prompt('Please enter a new title for your event')
       let calendarApi = selectInfo.view.calendar
@@ -35,6 +33,7 @@ import timeGridPlugin from '@fullcalendar/timegrid'
   
         return (
             <div>
+              <button onClick={()=>console.log(games.matches)}>click here</button>
                 <FullCalendar
                     plugins={[dayGridPlugin,timeGridPlugin,interactionPlugin]}
                     initialView='dayGridMonth'
