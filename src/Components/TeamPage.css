@@ -1,0 +1,19 @@
+.team-page-headline{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+}
+.team-page-text-in-pic{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -135px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    font-size: 40px;
+    color: snow;
+    text-shadow: 3px 3px #100101;
+}

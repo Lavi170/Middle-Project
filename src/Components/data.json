@@ -27,7 +27,8 @@
         "backroundPic": "src/pictures/Maccabi-Haifa.jpg",
         "subscriptionPrice1": 5700,
         "subscriptionPrice2": 2700,
-        "subscriptionPrice3": 2000
+        "subscriptionPrice3": 2000,
+        "maincolor":"green"
       },
       {
         "team": "Maccabi Tel Aviv",
@@ -56,7 +57,8 @@
         "backroundPic": "src/pictures/Maccabi-Tel-Aviv.jpg",
         "subscriptionPrice1": 4500,
         "subscriptionPrice2": 2600,
-        "subscriptionPrice3": 1700
+        "subscriptionPrice3": 1700,
+        "maincolor": "yellow"
       },
       {
         "team": "Hapoel Beer Sheva",
@@ -85,7 +87,8 @@
         "backroundPic": "src/pictures/hapoel-beer-sheva.jpeg",
         "subscriptionPrice1": 4300,
         "subscriptionPrice2": 2600,
-        "subscriptionPrice3": 2000
+        "subscriptionPrice3": 2000,
+        "maincolor": "red"
       },
   
       {
@@ -112,10 +115,11 @@
         "fav": false,
         "discription": "Netanya is an Israeli football club based in Netanya. Established in 1934, the club was a founding member of the Israeli League in 1949. After winning their first championship in 1971, the club's golden period lasted until the late 80s, including four more league titles and a double in 1978. The club is currently ranked 4th in the Israel Premier League",
         "logoPic": "src/pictures/maccabi-netanya-logo.png",
-        "backroundPic": "scr/pictures/Maccabi-Netanya.jpeg",
+        "backroundPic": "src/pictures/maccabi-netanya.jpg",
         "subscriptionPrice1": 3300,
         "subscriptionPrice2": 2100,
-        "subscriptionPrice3": 1550
+        "subscriptionPrice3": 1550,
+        "maincolor": "yellow"
       },
       {
         "team": "Hapoel Jerusalem",
@@ -140,7 +144,8 @@
         "backroundPic": "src/pictures/hapoel-katamon-jerusalem.jpg",
         "subscriptionPrice1": 3100,
         "subscriptionPrice2": 2050,
-        "subscriptionPrice3": 1400
+        "subscriptionPrice3": 1400,
+        "maincolor": "red"
       },
       {
         "team": "M.S Ashdod",
@@ -166,10 +171,11 @@
         "fav": false,
         "discription": "M.S Ashdod is an Israeli professional football club, playing in the port city of Ashdod. The unusual name of the team (unlike most Israeli football teams, this one only indicates the club's home city without any specific Jewish sporting association, such as Hapoel, Maccabi, or Beitar) is the result of the union of two city rivals, Hapoel Ashdod and Maccabi Ironi Ashdod in 1999. The club currently plays in the Israeli Premier League and is ranked 6th",
         "logoPic": "src/pictures/fc-ashdod-logo.gif",
-        "backroundPic": "src/pictures/asdod.jpg",
+        "backroundPic": "src/pictures/ashdod.jpg",
         "subscriptionPrice1": 2600,
         "subscriptionPrice2": 1800,
-        "subscriptionPrice3": 1400
+        "subscriptionPrice3": 1400,
+        "maincolor": "red"
       },
       {
         "team": "Beitar Jerusalem",
@@ -198,7 +204,8 @@
         "backroundPic": "src/pictures/Beitar_Jerusalem.jpg",
         "subscriptionPrice1": "3100",
         "subscriptionPrice2": "2600",
-        "subscriptionPrice3": "1990"
+        "subscriptionPrice3": "1990",
+        "maincolor":"yellow"
       },
   
       {
@@ -228,7 +235,8 @@
         "backroundPic": "src/pictures/Hapoel-Haifa.jpg",
         "subscriptionPrice1": 2700,
         "subscriptionPrice2": 1800,
-        "subscriptionPrice3": 1300
+        "subscriptionPrice3": 1300,
+        "maincolor": "blue"
       },
       {
         "team": "Bnei Sakhnin",
@@ -257,7 +265,8 @@
         "backroundPic": "src/pictures/sakhnin.jpg",
         "subscriptionPrice1": 2800,
         "subscriptionPrice2": 1990,
-        "subscriptionPrice3": 1700
+        "subscriptionPrice3": 1700,
+        "maincolor": "red"
       },
       {
         "team": "Hapoel Hadera",
@@ -286,7 +295,8 @@
         "backroundPic": "src/pictures/hapoel-hadera.jpg",
         "subscriptionPrice1": 2600,
         "subscriptionPrice2": 2200,
-        "subscriptionPrice3": 1400
+        "subscriptionPrice3": 1400,
+        "maincolor": "red"
       },
       {
         "team": "Hapoel Tel-Aviv",
@@ -315,7 +325,8 @@
         "backroundPic": "src/pictures/hapoel-tel-aviv.jpg",
         "subscriptionPrice1": 3300,
         "subscriptionPrice2": 2600,
-        "subscriptionPrice3": 1525
+        "subscriptionPrice3": 1525,
+        "maincolor": "red"
       },
       {
         "team": "Bney Reine",
@@ -344,7 +355,8 @@
         "backroundPic": "src/pictures/bney-reine.png",
         "subscriptionPrice1": 2900,
         "subscriptionPrice2": 1990,
-        "subscriptionPrice3": 1050
+        "subscriptionPrice3": 1050,
+        "maincolor": "blue"
       },
       {
         "team": "Kiryat Shmona",
@@ -373,7 +385,8 @@
         "backroundPic": "src/pictures/ironi-kiryat-shmona.jpg",
         "subscriptionPrice1": 2300,
         "subscriptionPrice2": 1500,
-        "subscriptionPrice3": 1100
+        "subscriptionPrice3": 1100,
+        "maincolor": "blue"
       },
       {
         "team": "Sektzia Ness Ziona",
@@ -402,7 +415,8 @@
         "backroundPic": "src/pictures/ness-ziona.jpg",
         "subscriptionPrice1": 2000,
         "subscriptionPrice2": 1300,
-        "subscriptionPrice3": 990
-      }
+        "subscriptionPrice3": 990,
+        "maincolor": "orange"
+     }
     ]
   }
