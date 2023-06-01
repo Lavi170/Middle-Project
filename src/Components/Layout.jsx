@@ -6,10 +6,10 @@ function Layout() {
             <nav className="nav-bar">
                 <button className="login-signup">Login </button>
                 <div className="right-side-nav-bar">
-                    <Link className="nav-link" to={"HomePage"} >
+                    <Link className="nav-link" to={"/"} >
                         Home 
                     </Link>
-                    <Link className="nav-link" to={"Calender"} >
+                    <Link className="nav-link" to={"CalendarComponent"} >
                         Calender
                     </Link>
 
