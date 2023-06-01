@@ -14,43 +14,43 @@ function HomePage({ value, setValue }) {
       </div>
 
     <Carousel  containerStyle={{
-      backgroundColor:"red"
+      backgroundColor:"#4b0388"
     }} cols={6} rows={1} gap={10} loop>
       <Carousel.Item>
-        <img width="70%" src="src/pictures/Beitar_Jerusalem-logo.png" />
+        <a href="/"><img width="70%" src="src/pictures/Beitar_Jerusalem-logo.png" /></a>
       </Carousel.Item>
       <Carousel.Item>
-        <img width="70%" src="src/pictures/Maccabi_Tel_Aviv_logo.png" />
+        <a href=""><img width="70%" src="src/pictures/Maccabi_Tel_Aviv_logo.png" /></a>
       </Carousel.Item>
       <Carousel.Item>
-        <img width="70%" src="src/pictures/hapoel-beer-sheva-logo.png" />
+        <a href=""><img width="70%" src="src/pictures/hapoel-beer-sheva-logo.png" /></a>
       </Carousel.Item>
       <Carousel.Item>
-      <img width="70%" src="src/pictures/maccabi-netanya-logo.png" />
+      <a href=""><img width="70%" src="src/pictures/maccabi-netanya-logo.png" /></a>
       </Carousel.Item>
       <Carousel.Item>
-      <img width="80%" src="src/pictures/hapoel-katamon-jerusalem-logo.png" />
+      <a href=""><img width="80%" src="src/pictures/hapoel-katamon-jerusalem-logo.png" /></a>
       </Carousel.Item>
       <Carousel.Item>
-      <img width="100%" height="90%" src="src/pictures/MS-Ashdod.png" />
+      <a href=""><img width="100%" height="90%" src="src/pictures/MS-Ashdod.png" /></a>
       </Carousel.Item>
       <Carousel.Item>
-      <img width="80%" src="src/pictures/Maccabi_Haifa-logo.png" />
+      <a href=""><img width="80%" src="src/pictures/Maccabi_Haifa-logo.png" /></a>
       </Carousel.Item>
       <Carousel.Item>
-      <img width="80%" src="src/pictures/Hapoel-Haifa-logo.png" />
+      <a href=""><img width="80%" src="src/pictures/Hapoel-Haifa-logo.png" /></a>
       </Carousel.Item>
       <Carousel.Item>
-      <img width="80%" src="src/pictures/bnei-sakhnin-logo.png" />
+      <a href=""><img width="80%" src="src/pictures/bnei-sakhnin-logo.png" /></a>
       </Carousel.Item>
       <Carousel.Item>
-      <img width="80%" src="src/pictures/hapoel-hadera-logo.png" />
+      <a href=""><img width="80%" src="src/pictures/hapoel-hadera-logo.png" /></a>
       </Carousel.Item>
       <Carousel.Item>
-      <img width="80%" src="src/pictures/hapoel-tel-aviv-logo.png" />
+      <a href=""><img width="80%" src="src/pictures/hapoel-tel-aviv-logo.png" /></a>
       </Carousel.Item>
       <Carousel.Item>
-      <img width="80%" src="src/pictures/maccabi-bnei-reine-logo.png" />
+      <a href=""><img width="80%" src="src/pictures/maccabi-bnei-reine-logo.png" /></a>
       </Carousel.Item>
       
     </Carousel>

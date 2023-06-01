@@ -34,9 +34,9 @@ function Layout() {
                     <Link className="layout-footer-left-links"> Contact us</Link>
                 </div>
                 <div id="layout-footer-right">
-                    <a className="layout-footer-right-links" href="https://www.instagram.com/"><img className="layout-footer-right-pictures" src="src/pictures/icons8-instagram-48.png" alt="" /></a>
-                    <a className="layout-footer-right-links" href="https://twitter.com/"><img className="layout-footer-right-pictures" src="src/pictures/icons8-twitter-48.png" alt="" /></a>
-                    <a className="layout-footer-right-links" href="https://he-il.facebook.com/"><img className="layout-footer-right-pictures" src="src/pictures/icons8-whatsapp-48.png" alt="" /></a>
+                    <a className="layout-footer-right-links" href="https://www.instagram.com/"><img className="layout-footer-right-pictures" src="../src/pictures/icons8-instagram-48.png" alt="" /></a>
+                    <a className="layout-footer-right-links" href="https://twitter.com/"><img className="layout-footer-right-pictures" src="../src/pictures/icons8-twitter-48.png" alt="" /></a>
+                    <a className="layout-footer-right-links" href="https://he-il.facebook.com/"><img className="layout-footer-right-pictures" src="../src/pictures/icons8-whatsapp-48.png" alt="" /></a>
                 </div>
             </div>
         </div>
