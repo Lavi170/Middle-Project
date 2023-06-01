@@ -51,7 +51,7 @@ function App() {
             </Route>
             <Route path='*' element={<Notfound />}></Route>
             <Route path='userpage' element={<UserPage />}>
-            <Route path="login" element={<Login />}></Route>
+            <Route path="" element={<Login />}></Route>
               <Route path='signup' element={<SignUp />}></Route>
             </Route>
           </Route>

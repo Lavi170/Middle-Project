@@ -17,7 +17,7 @@ function Layout() {
                         LOGO 
                     </div>
 
-                    <Link className="nav-link" >
+                    <Link className="nav-link" to={"Teams"}>
                         Teams
                     </Link>
                     <Link className="nav-link" >
@@ -29,7 +29,7 @@ function Layout() {
             <Outlet></Outlet>
             <div id="Layout-footer">
                 <div id="layout-footer-left">
-                    <Link className="layout-footer-left-links"> Contact us</Link>
+                    <Link className="layout-footer-left-links" to={"ContactUs"}> Contact us</Link>
                     <Link className="layout-footer-left-links"> About us</Link>
                     <Link className="layout-footer-left-links"> Contact us</Link>
                 </div>

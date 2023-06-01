@@ -12,7 +12,6 @@ const Teams = ({ value, setValue }) => {
               id="image-one-id"
               src={item.logoPic}
               height="90%"
-              width="85%"
               alt=""
               />
           </Link>
@@ -22,6 +21,7 @@ const Teams = ({ value, setValue }) => {
           <span>{`Playing in ${item.stadium} |`}</span>
           <span> {`${item.seats} Seats|`}</span>
           <span>{`Main formation: ${item.formation}`} </span>
+          <br />
           <div> <a href="">Buy Tickets Now</a></div>
           <div className="App"></div>
         </div>
