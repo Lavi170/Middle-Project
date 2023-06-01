@@ -8,6 +8,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr ;
+    width: 650px;
+    height: 350px;
 }
 
 #pay-choice-grid-choose{
@@ -16,6 +18,15 @@
     grid-column-start: 1 ;
     grid-column-end: 2 ;
     background-color: pink;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items:start;
+    padding: 10px 0px 0px 10px;
+}
+
+.pay-selectors{
+    margin-bottom: 10px;
 }
 #pay-choice-grid-stadium{
     grid-row-start: 1 ;
@@ -24,10 +35,27 @@
     grid-column-end: 3 ;
     background-color: blue;
 }
+
+#pay-choice-grid-stadium {
+    width: 375px;
+    height: 175px;
+}
+
 #pay-choice-grid-prices{
     grid-row-start: 2 ;
     grid-row-end: 3 ;
     grid-column-start: 2 ;
     grid-column-end: 3 ;
     background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pay-choice-grid-prices table{
+    border: 1px solid black;
+}
+#pay-choice-grid-prices td{
+    border: 1px solid black;
+    width: 100px;
 }

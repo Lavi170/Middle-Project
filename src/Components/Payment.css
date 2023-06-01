@@ -37,10 +37,14 @@
 
 #payment-inner-page{
     width: 70%;
-    height: 70%;
+    height: 400px;
     margin: 15px 15% 20px 15%;
     padding: 30px;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #payment-buttons{
