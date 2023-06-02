@@ -18,9 +18,9 @@ const TeamPage = ({ value }) => {
         className="team-page-headline"
         style={{ backgroundColor: currentTeam.maincolor }}
       >
-        <img
+        <img 
           src={`../../${currentTeam.logoPic}`}
-          style={{ height: "100%" }}
+          style={{ height: "100%"}}
           alt=""
         />
       </div>
@@ -33,6 +33,9 @@ const TeamPage = ({ value }) => {
           />
         </div>
         <div className="team-page-text-in-pic">{currentTeam.team}</div>
+         <h2 className="team-page-text-in-pic2">Upcoming games:</h2>
+         <div className="upcoming-games-block"></div>
+
       </div>
     </div>
   );
