@@ -7,8 +7,10 @@ import games from "./Calendar.json"
 // import { Calendar,formatDate } from '@fullcalendar/core';
 import { useState ,useEffect } from 'react';
 import timeGridPlugin from '@fullcalendar/timegrid'
- function CalendarComponent() {
-    const [events,setEvents]= useState(games.matches[0])
+ function CalendarComponent({value}) {
+    const [events,setEvents]= useState()
+    // [{title:`${value.results[0].homeGames[0].homeTeam}`, start:`${value.results[0].homeGames[0].date}`}]
+
     const handleDateSelect = (selectInfo) => {
       let title = prompt('Please enter a new title for your event')
       let calendarApi = selectInfo.view.calendar

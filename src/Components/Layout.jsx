@@ -4,7 +4,7 @@ function Layout() {
     return (
         <div>
             <nav className="nav-bar">
-                <button className="login-signup">Login </button>
+                <Link to={"UserPage"}><button className="login-signup">Login </button></Link>
                 <div className="right-side-nav-bar">
                     <Link className="nav-link" to={"/"} >
                         Home 
@@ -24,7 +24,7 @@ function Layout() {
                         News
                     </Link>
                 </div>
-                <button className="login-signup">Sign Up</button>
+                <Link to={"UserPage"}><button className="login-signup">Sign Up</button></Link>
             </nav>
             <Outlet></Outlet>
             <div id="Layout-footer">
