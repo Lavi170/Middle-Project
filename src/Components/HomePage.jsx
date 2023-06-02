@@ -10,7 +10,7 @@ function HomePage({ value, setValue }) {
         <video src={video} width={"600"} height={"300"} muted autoPlay loop />
         <div id="home-over-video">
           <div id="home-over-video-name">GoalTicket</div>
-          <div id="home-over-video-slogen">Some slogen</div>
+          <div id="home-over-video-slogen">Connect With The Beautiful Game</div>
         </div>
       </div>
 

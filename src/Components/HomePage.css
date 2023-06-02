@@ -27,7 +27,7 @@
     width: auto;
     height: auto;
     text-align: center;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
 }
 
 #home-over-video-name {
