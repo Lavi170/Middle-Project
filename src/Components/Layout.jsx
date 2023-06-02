@@ -30,8 +30,8 @@ function Layout() {
             <div id="Layout-footer">
                 <div id="layout-footer-left">
                     <Link className="layout-footer-left-links" to={"ContactUs"}> Contact us</Link>
-                    <Link className="layout-footer-left-links"> About us</Link>
-                    <Link className="layout-footer-left-links"> Contact us</Link>
+                    <Link className="layout-footer-left-links" to={"About"}> About us</Link>
+                    <Link className="layout-footer-left-links" > Contact us</Link>
                 </div>
                 <div id="layout-footer-right">
                     <a className="layout-footer-right-links" href="https://www.instagram.com/"><img className="layout-footer-right-pictures" src="../src/pictures/icons8-instagram-48.png" alt="" /></a>
