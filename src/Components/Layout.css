@@ -28,8 +28,9 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: rgb(111,4,4);
-background: linear-gradient(0deg, rgba(111,4,4,1) 1%, rgba(87,5,5,1) 13%, rgba(0,23,89,1) 93%);
+    /* background: rgb(111,4,4);
+background: linear-gradient(0deg, rgba(111,4,4,1) 1%, rgba(87,5,5,1) 13%, rgba(0,23,89,1) 93%); */
+background-color: snow;
 }
 
 .right-side-nav-bar {
@@ -46,13 +47,13 @@ background: linear-gradient(0deg, rgba(111,4,4,1) 1%, rgba(87,5,5,1) 13%, rgba(0
     font-size: x-large;
     text-align: center;
     font-family: sans-serif;
-    color: snow;
-     
+     color: rgb(0, 0, 0);
 }
 
 #nav-logo{
     background-color: white;
     color: black;
+height: 6vw;
 }
 
 a:link {
