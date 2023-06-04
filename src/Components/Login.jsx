@@ -1,28 +1,33 @@
 import React from 'react'
 import "./UserPage.css"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 const Login = () => {
   const [nameEntered, setNameEntered] = useState("")
   const [passwordEntered, setPasswordEntered] = useState("")
-  const [loggedIn , setLoggedIn]=useState(false);
-  sessionStorage.setItem( "status" , loggedIn)
+  const [loggedIn, setLoggedIn] = useState(localStorage.getItem("status"));
+  const [loggedUser, setLoggedUser] = useState()
+
+  useEffect(() => {
+    localStorage.setItem("Logged", nameEntered)
+  }, loggedUser)
+
+  localStorage.setItem("status", loggedIn)
   function tryToLogin() {
-      const nameUserEntered = localStorage.getItem(nameEntered)
-      // const parsedEnteredNameKEY=JSON.parse(nameUserEntered)
-      if (localStorage.getItem(nameEntered) == null) {
-        alert("User name or password are wrong")
-        console.log(`use name does not exsist${loggedIn}`);
+    const nameUserEntered = localStorage.getItem(nameEntered)
+    if (localStorage.getItem(nameEntered) == null) {
+      alert("User name or password are wrong")
+    } else {
+      if (localStorage.getItem(nameEntered) === passwordEntered) {
+        alert("Loged in successfully! Enjoy your game!")
+        setLoggedIn(true);
+        localStorage.setItem("status", loggedIn)
+        setLoggedUser(nameEntered)
+        console.log(loggedUser);
+
       } else {
-        if (localStorage.getItem(nameEntered)===passwordEntered){
-         alert("Loged in successfully! Enjoy your game!")
-         setLoggedIn(true);
-         console.log(`all good man${loggedIn}`);
-         sessionStorage.setItem( "status" , loggedIn )
-        } else{
-          alert("User name or password are wrong")
-          console.log(`password does not exsist${loggedIn}`);
-        }
+        alert("User name or password are wrong")
       }
+    }
   }
   return (
     <div className='user-page'>

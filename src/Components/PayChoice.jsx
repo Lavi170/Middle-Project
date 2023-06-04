@@ -54,7 +54,7 @@ function PayChoice({ value, setValue }) {
                     <div >
                         {(ticketDeal == "single" || ticketDeal == "select-deal") ?
                             (<div id='pay-choice-tickets-pick'> Choose number of tickets
-                                <input onChange={() => (setNumberOfTickets(event.target.value))} type="number" min="0" max="15" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" />
+                                <input onChange={() => (setNumberOfTickets(event.target.value))} type="number" min="0" max="15" onKeyPress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" />
                             </div>) : (null)}
 
                     </div>

@@ -1,29 +1,30 @@
 import "./Layout.css"
 import { Link, Outlet } from "react-router-dom";
-import { useState , useEffect } from "react";
-// import { useLocalStorage } from 'usehooks-ts'
+import { useState, useEffect } from "react";
 
 function Layout() {
-    const[isUserLogged , setIsUserLogged]=useState('login' , false);
-   
-    useEffect(()=>{
-        setIsUserLogged(sessionStorage.getItem("status"))
-    },[isUserLogged])
-    
+    const [isUserLogged, setIsUserLogged] = useState(localStorage.getItem("status"));
+    const [userSignedIn, setUserSignedIn] = useState("")
+    // useEffect(()=>{
+    // const correntlyLogged=localStorage.getItem("Logged")   
+    // })
+
     return (
         <div>
             <nav className="nav-bar">
+                {isUserLogged == "true" ?
+                    <div id="user-signed-in">
+                        <button onClick={() => localStorage.setItem("status", !isUserLogged)} className="login-signup">Log out</button>
+                        <h4>Hello {localStorage.getItem("Logged")}</h4>
+                    </div>
+                    :
                     <Link to={"UserPage"}>
-          {isUserLogged === true ? (
-            <button className="login-signup"> Log out</button>
-          ) : (
-            <button className="login-signup"> Log in</button>
-          )}
-        </Link>
-        <button onClick={()=>console.log(isUserLogged)}>click</button>
+                        <button className="login-signup">Login</button>
+                    </Link>
+                }
                 <div className="right-side-nav-bar">
                     <Link className="nav-link" to={"/"} >
-                        Home 
+                        Home
                     </Link>
                     <Link className="nav-link" to={"CalendarComponent"} >
                         Calender

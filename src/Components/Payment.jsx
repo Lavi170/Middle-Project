@@ -3,13 +3,15 @@ import { useState, useEffect } from "react";
 import './Payment.css'
 
 function Payment({ value, setValue }) {
-    let [pageNumber, setPageNumber] = useState(1);
+    let [pageNumber, setPageNumber] = useState(2);
     let [relleventPath, setRelleventPath] = useState("/Payment/PayChoice")
+    let [firstBallStyle , setFirstBallStyle]=useState("")
+    let [secondBallStyle , setSecondBallStyle]=useState("")
+    let [thirdBallStyle , setThirdBallStyle]=useState("")
+    let [fourthBallStyle , setFourthBallStyle]=useState("")
 
     useEffect(() => {
-        if (pageNumber === 1) {
-            setRelleventPath("/Payment/PayChoice")
-        } else if (pageNumber === 2) {
+        if (pageNumber === 2) {
             setRelleventPath("/Payment/PayOrder")
         } else if (pageNumber === 3) {
             setRelleventPath("/Payment/PayPaying")
@@ -17,25 +19,23 @@ function Payment({ value, setValue }) {
             setRelleventPath("/Payment/PayReceipt")
         } else if (pageNumber === 5) {
             setRelleventPath("/HomePage")
+        } else if (pageNumber === 6) {
             setPageNumber(1)
+        } else {
+            setRelleventPath("/Payment/PayChoice")
         }
     }, [pageNumber])
 
-    useEffect(()=>{
-        function nextPage(){
-            
-        }
-    })
     return (
         <div id="payment-page">
             <div id="payment-process">
-                <div className="process-ball" id="process-first-ball">Choose</div>
-                <div className="process-bar" id="process-first-bar"></div>
-                <div className="process-ball" id="process-second-ball">Order</div>
-                <div className="process-bar" id="process-second-bar"></div>
-                <div className="process-ball" id="process-third-ball">Payment</div>
-                <div className="process-bar" id="process-third-bar"></div>
-                <div className="process-ball" id="process-fourth-ball">Receipt</div>
+                <div className="half-process-ball" id="process-first-ball">Choose</div>
+                <div className="grey-process-bar" id="process-first-bar"></div>
+                <div className="grey-process-ball" id="process-second-ball">Order</div>
+                <div className="grey-process-bar" id="process-second-bar"></div>
+                <div className="grey-process-ball" id="process-third-ball">Payment</div>
+                <div className="grey-process-bar" id="process-third-bar"></div>
+                <div className="grey-process-ball" id="process-fourth-ball">Receipt</div>
             </div>
 
             <div id="payment-inner-page">
@@ -44,8 +44,12 @@ function Payment({ value, setValue }) {
 
             <div id="payment-buttons">
                 <Link to={relleventPath}><button onClick={() => (setPageNumber(--pageNumber) + console.log(relleventPath - pageNumber))} className="payment-buttons-movemoent">Back</button></Link>
-                <Link to={relleventPath}><button onClick={() => (setPageNumber(++pageNumber) + console.log(relleventPath + pageNumber))} className="payment-buttons-movemoent">Next</button></Link>
-
+                <div>{pageNumber}{relleventPath}</div>
+                {pageNumber < 5 ?
+                    <Link to={relleventPath}><button onClick={() => (setPageNumber(++pageNumber) + console.log(relleventPath + pageNumber))} className="payment-buttons-movemoent">Next</button></Link>
+                    :
+                    <Link to={"/"}><button onClick={() => (setPageNumber(++pageNumber) + console.log(relleventPath + pageNumber))} className="payment-buttons-movemoent">Home</button></Link>
+                }
             </div>
         </div>
     );

@@ -26,6 +26,7 @@ import RunningNews from './RunningNews'
 
 
 function App() {
+  localStorage.setItem("logged-user" , null)
 
   const [mainData, SetmainData] = useState([]);
   useEffect(() => {
@@ -50,6 +51,7 @@ function App() {
             <Route path="/contactus" element={<ContactUs />}></Route>
             <Route element={<RunningNews></RunningNews>}></Route>
             <Route path='/Payment' element={<Payment />}>
+              <Route index element={<PayChoice />}></Route>
               <Route path='PayChoice' element={<PayChoice />}></Route>
               <Route path='PayOrder' element={<PayOrder />}></Route>
               <Route path='PayPaying' element={<PayPaying />}></Route>

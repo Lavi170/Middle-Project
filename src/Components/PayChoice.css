@@ -8,8 +8,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr ;
-    width: 650px;
-    height: 350px;
+    width: 90%;
+    height: 95%;
 }
 
 #pay-choice-grid-choose{

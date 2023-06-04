@@ -1,17 +1,17 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-#payment-page{
+#payment-page {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-#payment-process{
+#payment-process {
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -19,23 +19,56 @@
     align-items: center;
 }
 
-.process-ball{
+
+.grey-process-bar {
+    margin-left: -2px;
+    width: 100px;
+    height: 25px;
+    background-color: #808080;
+}
+
+.green-process-bar {
+    margin-left: -2px;
+    width: 100px;
+    height: 25px;
+    background-color: #06b106;
+}
+
+.grey-process-ball{
+    margin-left: -2px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: grey;
+    background-color:  #808080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.half-process-ball{
+    margin-left: -2px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgb(6, 177, 6);
+    background: linear-gradient(90deg, rgba(6, 177, 6, 1) 0%, rgba(128, 128, 128, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.green-process-ball{
+    margin-left: -2px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #06b106;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.process-bar{
-    width: 100px;
-    height: 25px;
-    background-color: grey;
-}
 
-#payment-inner-page{
+
+#payment-inner-page {
     width: 70%;
     height: 400px;
     margin: 15px 15% 20px 15%;
@@ -47,7 +80,7 @@
     flex-direction: column;
 }
 
-#payment-buttons{
+#payment-buttons {
     margin-bottom: 25px;
     display: flex;
     justify-content: space-evenly;
@@ -55,6 +88,6 @@
     width: 300px;
 }
 
-#payment-buttons button{
+#payment-buttons button {
     font-size: x-large;
 }

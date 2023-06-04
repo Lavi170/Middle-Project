@@ -3,8 +3,6 @@ import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction'
 import data from "./data.json"
-// import { render } from '@fullcalendar/core/preact';
-// import { Calendar,formatDate } from '@fullcalendar/core';
 import { useState ,useEffect } from 'react';
 import timeGridPlugin from '@fullcalendar/timegrid'
 function CalendarComponent() {
@@ -54,10 +52,10 @@ useEffect(() => {
                     plugins={[dayGridPlugin,timeGridPlugin,interactionPlugin]}
                     initialView='dayGridMonth'
                     // dateClick={handleDatelick}
-                    editable={true}
+                    editable={false}
                     selectable={true}
-                    select={handleDateSelect}
-                    eventClick={handleEventClick}
+                    // select={handleDateSelect}
+                    // eventClick={handleEventClick}
                     // eventsSet={handleEvents}
                     events={events} // Pass the events array to the events prop
                 />

@@ -14,9 +14,9 @@
 #pay-paying-grid{
     display: grid;
     grid-template-columns: repeat( 4 , 1fr )  ;
-    grid-template-rows: repeat( 5 , 1fr ) ;
+    grid-template-rows: repeat( 6 , 1fr ) ;
     width: 80%;
-    height: 100%;
+    height: 90%;
     border: 1px solid black;
     padding: 5px;
     margin-bottom: 5px;
@@ -31,33 +31,34 @@
     grid-row-end: 2 ;
     grid-column-start: 1 ;
     grid-column-end: 5 ;
-    /* background-color: aqua; */
 }
 #paying-grid-number{
     grid-row-start: 2 ;
     grid-row-end: 3 ;
     grid-column-start: 1 ;
     grid-column-end: 5 ;
-    /* background-color: blue; */
 }
 #paying-grid-expire{
     grid-row-start: 3 ;
     grid-row-end: 4 ;
     grid-column-start: 1 ;
     grid-column-end: 5 ;
-    /* background-color: red; */
 }
 #paying-grid-cvc{
     grid-row-start: 4;
     grid-row-end: 5 ;
     grid-column-start: 1 ;
     grid-column-end: 5 ;
-    /* background-color: yellow; */
 }
-#paying-grid-BTN{
+#paying-grid-mail{
     grid-row-start: 5 ;
     grid-row-end: 6 ;
     grid-column-start: 2 ;
     grid-column-end: 4 ;
-    /* background-color: green; */
+}
+#paying-grid-BTN{
+    grid-row-start: 6 ;
+    grid-row-end: 7 ;
+    grid-column-start: 2 ;
+    grid-column-end: 4 ;
 }

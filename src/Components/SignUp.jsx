@@ -8,11 +8,11 @@ const SignUp = () => {
   function anigma() {
     let randomKey = Math.floor(Math.randomm() * 5)
     if (randomKey === 0) {
-      for(let i=0 ; i<newUserPassword.length; i++){
-        
+      for (let i = 0; i < newUserPassword.length; i++) {
+
       }
     } else if (randomKey === 1) {
-      
+
     } else if (randomKey === 3) {
 
     } else if (randomKey === 4) {
@@ -21,12 +21,17 @@ const SignUp = () => {
 
     }
   }
-  function checkAndSign (){
-    if(newUserName.length>2){
-      if (localStorage.getItem(newUserName)===null){
-        if(newUserPassword.length>5){
-        localStorage.setItem(newUserName, newUserPassword)
-        alert("Signed up successfully!")
+  const newUser = {
+    userName: newUserName,
+    userPassword: newUserPassword
+  }
+
+  function checkAndSign() {
+    if (newUserName.length > 2) {
+      if (localStorage.getItem(newUserName) === null) {
+        if (newUserPassword.length > 5) {
+          localStorage.setItem(newUserName, newUserPassword)
+          alert("Signed up successfully!")
         } else {
           alert("Password too short, please enter a password atleast 6 chars long")
         }
