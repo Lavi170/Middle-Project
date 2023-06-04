@@ -20,6 +20,12 @@ function Payment({ value, setValue }) {
             setPageNumber(1)
         }
     }, [pageNumber])
+
+    useEffect(()=>{
+        function nextPage(){
+            
+        }
+    })
     return (
         <div id="payment-page">
             <div id="payment-process">
@@ -37,7 +43,6 @@ function Payment({ value, setValue }) {
             </div>
 
             <div id="payment-buttons">
-                <button onClick={() => (setPageNumber(--pageNumber))} className="payment-buttons-movemoent">back</button>
                 <Link to={relleventPath}><button onClick={() => (setPageNumber(--pageNumber) + console.log(relleventPath - pageNumber))} className="payment-buttons-movemoent">Back</button></Link>
                 <Link to={relleventPath}><button onClick={() => (setPageNumber(++pageNumber) + console.log(relleventPath + pageNumber))} className="payment-buttons-movemoent">Next</button></Link>
 

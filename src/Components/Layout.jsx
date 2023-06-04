@@ -1,10 +1,26 @@
 import "./Layout.css"
 import { Link, Outlet } from "react-router-dom";
+import { useState , useEffect } from "react";
+// import { useLocalStorage } from 'usehooks-ts'
+
 function Layout() {
+    const[isUserLogged , setIsUserLogged]=useState('login' , false);
+   
+    useEffect(()=>{
+        setIsUserLogged(sessionStorage.getItem("status"))
+    },[isUserLogged])
+    
     return (
         <div>
             <nav className="nav-bar">
-                <Link to={"UserPage"}><button className="login-signup">Login </button></Link>
+                    <Link to={"UserPage"}>
+          {isUserLogged === true ? (
+            <button className="login-signup"> Log out</button>
+          ) : (
+            <button className="login-signup"> Log in</button>
+          )}
+        </Link>
+        <button onClick={()=>console.log(isUserLogged)}>click</button>
                 <div className="right-side-nav-bar">
                     <Link className="nav-link" to={"/"} >
                         Home 

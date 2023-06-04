@@ -2,14 +2,30 @@ import React from 'react'
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction'
-import games from "./Calendar.json"
+import data from "./data.json"
 // import { render } from '@fullcalendar/core/preact';
 // import { Calendar,formatDate } from '@fullcalendar/core';
 import { useState ,useEffect } from 'react';
 import timeGridPlugin from '@fullcalendar/timegrid'
- function CalendarComponent({value}) {
-    const [events,setEvents]= useState()
-    // [{title:`${value.results[0].homeGames[0].homeTeam}`, start:`${value.results[0].homeGames[0].date}`}]
+function CalendarComponent() {
+  const [events, setEvents] = useState([]);
+
+useEffect(() => {
+  const updatedEvents = [];
+
+  data.results.forEach((result) => {
+    result.homeGames.forEach((item) => {
+      const event = {
+        title: `${item.homeTeam} vs. ${item.awayTeam}`,
+        start: item.date,
+      };
+
+      updatedEvents.push(event);
+    });
+  });
+
+  setEvents(updatedEvents);
+}, [data.results]);
 
     const handleDateSelect = (selectInfo) => {
       let title = prompt('Please enter a new title for your event')
@@ -32,10 +48,8 @@ import timeGridPlugin from '@fullcalendar/timegrid'
         clickInfo.event.remove()
       }
     }
-  
         return (
             <div>
-              <button onClick={()=>console.log(games.matches)}>click here</button>
                 <FullCalendar
                     plugins={[dayGridPlugin,timeGridPlugin,interactionPlugin]}
                     initialView='dayGridMonth'

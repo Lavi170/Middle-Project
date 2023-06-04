@@ -4,11 +4,25 @@ import { useState } from 'react'
 const Login = () => {
   const [nameEntered, setNameEntered] = useState("")
   const [passwordEntered, setPasswordEntered] = useState("")
+  const [loggedIn , setLoggedIn]=useState(false);
+  sessionStorage.setItem( "status" , loggedIn)
   function tryToLogin() {
-    for (let i=0 ; i<localStorage.length ; i++){
-      
-      console.log(localStorage.nameEntered);
-    }
+      const nameUserEntered = localStorage.getItem(nameEntered)
+      // const parsedEnteredNameKEY=JSON.parse(nameUserEntered)
+      if (localStorage.getItem(nameEntered) == null) {
+        alert("User name or password are wrong")
+        console.log(`use name does not exsist${loggedIn}`);
+      } else {
+        if (localStorage.getItem(nameEntered)===passwordEntered){
+         alert("Loged in successfully! Enjoy your game!")
+         setLoggedIn(true);
+         console.log(`all good man${loggedIn}`);
+         sessionStorage.setItem( "status" , loggedIn )
+        } else{
+          alert("User name or password are wrong")
+          console.log(`password does not exsist${loggedIn}`);
+        }
+      }
   }
   return (
     <div className='user-page'>

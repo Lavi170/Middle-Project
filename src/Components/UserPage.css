@@ -1,4 +1,8 @@
+#user-page-outlet{
+  height: 75vh;
+}
 .user-page-container{
+  height: 100%;
     width: 300px;
   background-color: white;
   margin-bottom: 40px;
@@ -13,6 +17,7 @@
   box-shadow: 1px 1px rgb(163, 161, 161);
 }
 .user-page{
+  height: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
