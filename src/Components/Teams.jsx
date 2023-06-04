@@ -1,5 +1,6 @@
 import React from 'react'
 import { Outlet, Link, useParams, useLocation } from "react-router-dom";
+
 import "./Teams.css"
 const Teams = ({ value, setValue }) => {
   return (
@@ -10,7 +11,7 @@ const Teams = ({ value, setValue }) => {
           <Link to={`${item.team}`}>   
             <img
               id="image-one-id"
-              src={item.logoPic}
+              src={`../${item.logoPic}`}
               height="90%"
               alt=""
               />

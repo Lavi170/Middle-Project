@@ -1,39 +1,41 @@
-import "./Match.css"
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
-import React from "react";
-const center = {
-    lat: -3.745,
-    lng: -38.523
-};
+import "./Match.css";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 const containerStyle = {
-    width: "100%",
-    height: "100%"
-}
+  width: "100%",
+  height: "100%",
+};
 
-function Match() {
-    const { isLoaded } = useJsApiLoader({
-        id: 'google-map-script',
-        googleMapsApiKey: "AIzaSyDgmlgJNh3bbFMxC9tBsX9XgVMVqM1dpis"
-    })
-
-    const [map, setMap] = React.useState(null)
-
-    const onLoad = React.useCallback(function callback(map) {
-        const bounds = new window.google.maps.LatLngBounds(center);
-        map.fitBounds(bounds);
-
-        setMap(map)
-    }, [])
-
-    const onUnmount = React.useCallback(function callback(map) {
-        setMap(null)
-      }, [])
-
-
-    return (
-        <div id="match-page">
+function Match({ value, setValue, currentTeam }) {
+  let { currentdate } = useParams();
+  console.log(currentdate);
+  const [match, setMatch] = useState({})
+  const [count, setCount] = useState(0)
+// const [currentTeam,setCurrentTeam] = useState()
+  useEffect(() => {
+    const foundTeam = currentTeam?.homeGames?.find((obj) => obj?.date==currentdate);
+    setMatch(foundTeam);
+    console.log(match, "match");
+  }, [count]);
+  setCount(1)
+  return (
+    <div id="match-page">
+      <div className="match-container">
+        {match?.filter(item=>item.date==currentdate)?.map((game, index) => (
+          <div key={index} className="match-item">
+            <h2>{game.awayTeam}</h2>
             
-            <div id="match-header">
+          </div>
+        ))}
+        <h1>{`${currentTeam.team}`}</h1>
+        <h1>{match.date}</h1>
+      </div>
+    </div>
+  );
+}
+export default Match;
+{
+  /* <div id="match-header">
                 <h1>Home team VS. Away team</h1>
             </div>
             <div id="match-big-grid">
@@ -48,22 +50,11 @@ function Match() {
                         <button className="match-buttons">Buy tickets</button>
                     </div>
                     <div className="match-info" id="match-api">
-                        <GoogleMap
-                            mapContainerStyle={containerStyle}
-                            center={center}
-                            zoom={10}
-                            onLoad={onLoad}
-                            onUnmount={onUnmount}>
-                        </GoogleMap>
                     </div>
 
                 </div>
                 <div id="match-grid-right-side">
                     left
                 </div>
-            </div>
-
-        </div>
-    );
-};
-export default Match;
+            </div> */
+}

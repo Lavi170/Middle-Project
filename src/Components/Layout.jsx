@@ -20,7 +20,6 @@ function Layout() {
             <button className="login-signup"> Log in</button>
           )}
         </Link>
-        <button onClick={()=>console.log(isUserLogged)}>click</button>
                 <div className="right-side-nav-bar">
                     <Link className="nav-link" to={"/"} >
                         Home 
@@ -34,7 +33,7 @@ function Layout() {
                     <Link className="nav-link" to={"Teams"}>
                         Teams
                     </Link>
-                    <Link className="nav-link" >
+                    <Link className="nav-link" to={"news"}>
                         News
                     </Link>
                 </div>
