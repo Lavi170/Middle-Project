@@ -7,10 +7,12 @@
   
   .carousel-img {
     height: auto;
-    width: 16.66%; /* Adjust the width to show 6 images */
+    /* width: 16.66%; */
+    width: 250%;
+
     max-height: 100px;
     object-fit: contain;
-    margin: 0 25px; /* Adjust the margin to provide spacing between images */
+    margin: 0 75px; /* Adjust the margin to provide spacing between images */
   }
   
   .carousel-content-wrapper {

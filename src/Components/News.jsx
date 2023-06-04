@@ -2,7 +2,6 @@ import React from 'react';
 import './News.css';
 
 const News = () => {
-  // Example news data
   const news = [
     {
       id: 1,
@@ -16,7 +15,6 @@ const News = () => {
       image: 'image2.jpg',
       content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
-    // Add more news items as needed
   ];
 
   return (

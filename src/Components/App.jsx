@@ -20,7 +20,7 @@ import PayOrder from './PayOrder';
 import PayPaying from './PayPaying';
 import PayReceipt from './PayReceipt';
 import News from './News';
-
+import RunningNews from './RunningNews'
 
 
 function App() {
@@ -45,6 +45,7 @@ function App() {
             <Route path='/About' element={<About />}></Route>
             <Route path='/news' element={<News />}></Route>
             <Route path="/contactus" element={<ContactUs />}></Route>
+            <Route element={<RunningNews></RunningNews>}></Route>
             <Route path='/Payment' element={<Payment />}>
               <Route path='PayChoice' element={<PayChoice />}></Route>
               <Route path='PayOrder' element={<PayOrder />}></Route>

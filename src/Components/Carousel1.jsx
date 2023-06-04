@@ -8,9 +8,9 @@ const Carousel1 = (props) => {
   const [hideRightArrow, setHideRightArrow] = useState(false);
 
   const next = () => {
-    if (currentIndex < length - 1) {
+    if (currentIndex < length - 6) {
       setCurrentIndex((prevState) => prevState + 1);
-      if (currentIndex === length - 2) {
+      if (currentIndex === length - 6) {
         setHideRightArrow(true);
       }
     }

@@ -1,19 +1,98 @@
-.team-page-headline{
-    height: 15vh;
-    display: flex;
-    justify-content: center;
+.team-page-headline {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
 }
-.team-page-text-in-pic{
-    position: absolute;
+
+.team-page-text-in-pic {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  font-size: 40px;
+  color: snow;
+  text-shadow: 3px 3px #100101;
+  z-index: 3;
+}
+
+.team-page-container {
+  position: relative;
+}
+
+.team-page-main-pic {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.team-page-main-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upcoming-games-block {
+  position: absolute;
+    width: 25%;
+    height: 49%;
+    right: 19%;
     top: 50%;
-    left: 50%;
-    margin-top: -60px;
-    margin-left: -135px;
-    width: auto;
-    height: auto;
-    text-align: center;
-    backdrop-filter: blur(5px);
-    font-size: 40px;
-    color: snow;
-    text-shadow: 3px 3px #100101;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    flex-direction: row;
+    justify-content: space-around;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.game-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.game-info {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.team-page-text-in-pic2 {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 20%;
+  top: 35%;
+  color:snow;
+  text-shadow: 3px 3px #100101;
+  font-size: xx-large;
+}
+.team-discription{
+  position: absolute;
+    width: 25%;
+    height: 49%;
+    right: 59%;
+    top: 50%;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    justify-content: space-around;
+    backdrop-filter: blur(1.5px);
+    font-size: large;
+    color: aliceblue;
 }
