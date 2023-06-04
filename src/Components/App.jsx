@@ -20,25 +20,28 @@ import PayOrder from './PayOrder';
 import PayPaying from './PayPaying';
 import PayReceipt from './PayReceipt';
 import News from './News';
+import Match from './Match';
+
 import RunningNews from './RunningNews'
 
 
 function App() {
-  
+
   const [mainData, SetmainData] = useState([]);
   useEffect(() => {
-    SetmainData(data&&data?.results);
+    SetmainData(data && data?.results);
   }, []);
 
   return (
     <div>
-        <Routes>
-          <Route path='/' element={<Layout />}>
-            <Route index element={<HomePage HomePage value={mainData} setValue={SetmainData} />}></Route>
-            
-            <Route path='/CalendarComponent' element={<CalendarComponent value={mainData} setValue={SetmainData} />}></Route>
-            <Route path="/Teams" element={<Teams  value={mainData} setValue={SetmainData}/>}></Route>
-            <Route
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgmlgJNh3bbFMxC9tBsX9XgVMVqM1dpis"></script>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<HomePage HomePage value={mainData} setValue={SetmainData} />}></Route>
+          <Route path='Match' element={<Match />}></Route>
+          <Route path='/CalendarComponent' element={<CalendarComponent value={mainData} setValue={SetmainData} />}></Route>
+          <Route path="/Teams" element={<Teams value={mainData} setValue={SetmainData} />}></Route>
+          <Route
             path="Teams/:teamname"
             element={<TeamPage value={mainData} setValue={SetmainData} />}
           ></Route>
@@ -55,11 +58,11 @@ function App() {
             <Route path='*' element={<Notfound />}></Route>
             <Route path='userpage' element={<UserPage />}>
             <Route path="" element={<Login />}></Route>
-              <Route path='signup' element={<SignUp />}></Route>
-            </Route>
+            <Route path='signup' element={<SignUp />}></Route>
           </Route>
-          <Route path='*' element={<Notfound />} ></Route>
-        </Routes>
+        </Route>
+        <Route path='*' element={<Notfound />} ></Route>
+      </Routes>
     </div>
   );
 }
