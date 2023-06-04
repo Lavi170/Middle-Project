@@ -19,7 +19,11 @@ function Layout() {
                     </div>
                     :
                     <Link to={"UserPage"}>
-                        <button className="login-signup">Login</button>
+                        {isUserLogged === true ? (
+                            <button className="login-signup"> Log out</button>
+                        ) : (
+                            <button className="login-signup"> Log in</button>
+                        )}
                     </Link>
                 }
                 <div className="right-side-nav-bar">
@@ -35,7 +39,7 @@ function Layout() {
                     <Link className="nav-link" to={"Teams"}>
                         Teams
                     </Link>
-                    <Link className="nav-link" >
+                    <Link className="nav-link" to={"news"}>
                         News
                     </Link>
                 </div>

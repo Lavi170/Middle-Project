@@ -26,7 +26,7 @@ import RunningNews from './RunningNews'
 
 
 function App() {
-  localStorage.setItem("logged-user" , null)
+  const [currentTeam, setcurrentTeam] = useState();  localStorage.setItem("logged-user" , null)
 
   const [mainData, SetmainData] = useState([]);
   useEffect(() => {
@@ -38,13 +38,13 @@ function App() {
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgmlgJNh3bbFMxC9tBsX9XgVMVqM1dpis"></script>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<HomePage HomePage value={mainData} setValue={SetmainData} />}></Route>
-          <Route path='Match' element={<Match />}></Route>
+          <Route index element={<HomePage value={mainData} setValue={SetmainData} />}></Route>
+          <Route path='Teams/:teamname:currentdate' element={<Match currentTeam={currentTeam} value={mainData} setValue={SetmainData}/>}></Route>
           <Route path='/CalendarComponent' element={<CalendarComponent value={mainData} setValue={SetmainData} />}></Route>
           <Route path="/Teams" element={<Teams value={mainData} setValue={SetmainData} />}></Route>
           <Route
             path="Teams/:teamname"
-            element={<TeamPage value={mainData} setValue={SetmainData} />}
+            element={<TeamPage setcurrentTeam={setcurrentTeam} currentTeam={currentTeam} value={mainData} setValue={SetmainData} />}
           ></Route>
             <Route path='/About' element={<About />}></Route>
             <Route path='/news' element={<News />}></Route>
