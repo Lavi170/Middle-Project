@@ -1,10 +1,27 @@
-*{
-    margin: 0 ;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#pay-transaction-summary{
+#pay-receipt-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#pay-order-receipt {
+    position: absolute;
+    top: 30vh;
+    border: 1px solid black;
+    width: 80%;
+    height: 60%;
+    padding: 10px;
+}
+
+#pay-transaction-summary {
     border: 1px solid black;
     width: 90%;
     margin: 10px 5% 15px 5%;

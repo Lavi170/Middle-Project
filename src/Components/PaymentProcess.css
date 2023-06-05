@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body{
+    background: rgb(6,177,6);
+background: linear-gradient(48deg, rgba(6,177,6,1) 0%, rgba(3,133,129,1) 29%, rgba(0,14,255,1) 50%, rgba(8,12,73,1) 100%);
+} */
+
+#payment-process {
+    position: absolute;
+    top: 14vh;
+    height: 14vh;
+    width: 66vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.grey-process-bar {
+    margin-left: -4px;
+    width: 10vw;
+    height: 2.5vw;
+    background-color: #808080;
+}
+
+.green-process-bar {
+    margin-left: -4px;
+    width: 10vw;
+    height: 2.5vw;
+    background-color: #06b106;
+}
+
+.grey-process-ball{
+    margin-left: -4px;
+    width: 10vw;
+    height: 10vw;
+    max-height: 120px;
+    max-width: 120px;
+    border-radius: 50%;
+    background-color:  #808080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.half-process-ball{
+    margin-left: -4px;
+    width: 10vw;
+    height: 10vw;
+    max-height: 120px;
+    max-width: 120px;
+    border-radius: 50%;
+    background: rgb(6, 177, 6);
+    background: linear-gradient(90deg, rgba(6, 177, 6, 1) 0%, rgba(128, 128, 128, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.green-process-ball{
+    margin-left: -3px;
+    width: 10vw;
+    height: 10vw;
+    max-height: 120px;
+    max-width: 120px;
+    border-radius: 50%;
+    background-color: #06b106;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pay-buttons{
+    position: absolute;
+    top: 80vh ;
+    width: 30%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.pay-buttons button{
+    width: 10vh;
+    height: 4vh;
+    border-radius: 10px;
+    font-size: larger;
+    background-color: white;
+    transition: all 1s;
+}
+
+.pay-buttons button:hover{
+    background-color: black;
+    color: white;
+    width: 11vh;
+    height: 5vh;
+
+}

@@ -2,28 +2,29 @@ import "./Layout.css"
 import { Link, Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+
 function Layout() {
     const [isUserLogged, setIsUserLogged] = useState(localStorage.getItem("status"));
-    const [userSignedIn, setUserSignedIn] = useState("")
-    // useEffect(()=>{
-    // const correntlyLogged=localStorage.getItem("Logged")   
-    // })
+    const [userSignedIn, setUserSignedIn] = useState(localStorage.getItem("Logged"))
+    
+    function userLogOut() {
+        localStorage.setItem("status", !isUserLogged)
+        localStorage.setItem("Logged", null)
+        window.location.reload();
+    }
+    
 
     return (
         <div>
             <nav className="nav-bar">
                 {isUserLogged == "true" ?
                     <div id="user-signed-in">
-                        <button onClick={() => localStorage.setItem("status", !isUserLogged)} className="login-signup">Log out</button>
-                        <h4>Hello {localStorage.getItem("Logged")}</h4>
+                        <button onClick={() => userLogOut()} className="login-signup"> Log-out </button>
+                        <h4>Hello {userSignedIn} </h4>
                     </div>
                     :
                     <Link to={"UserPage"}>
-                        {isUserLogged === true ? (
-                            <button className="login-signup"> Log out</button>
-                        ) : (
-                            <button className="login-signup"> Log in</button>
-                        )}
+                        <button className="login-signup"> Log in </button>
                     </Link>
                 }
                 <div className="right-side-nav-bar">

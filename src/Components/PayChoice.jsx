@@ -1,6 +1,8 @@
 import React from 'react'
 import "./PayChoice.css"
+import "./PaymentProcess.css"
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
 function PayChoice({ value, setValue }) {
@@ -8,6 +10,7 @@ function PayChoice({ value, setValue }) {
     let [ticketDeal, setTicketDeal] = useState("")
     let [ticketType, setTIcketType] = useState("")
     let [numberOfTickets, setNumberOfTickets] = useState(0)
+    let [approved, setApproved] = useState(false)
 
     let orderObj = {
         "stand": stadiumStand,
@@ -16,8 +19,23 @@ function PayChoice({ value, setValue }) {
         "amount": numberOfTickets,
     }
 
+    function sendingForApproval() {
+        console.log("hello world ");
+        setApproved(true)
+        sessionStorage.setItem('user', JSON.stringify(orderObj))
+    }
+
     return (
         <div id='pay-choice-page'>
+                <div id="payment-process">
+                    <div className="half-process-ball" id="process-first-ball">Choose</div>
+                    <div className="grey-process-bar" id="process-first-bar"></div>
+                    <div className="grey-process-ball" id="process-second-ball">Order</div>
+                    <div className="grey-process-bar" id="process-second-bar"></div>
+                    <div className="grey-process-ball" id="process-third-ball">Payment</div>
+                    <div className="grey-process-bar" id="process-third-bar"></div>
+                    <div className="grey-process-ball" id="process-fourth-ball">Receipt</div>
+                </div>
             <div id='pay-choice-grid'>
                 <div id='pay-choice-grid-choose'>
                     <h1>Choose tickets</h1>
@@ -40,7 +58,6 @@ function PayChoice({ value, setValue }) {
                         </select>
                     </div>
 
-
                     <div> Choose ticket type
                         <select className='pay-selectors' onChange={() => setTIcketType(event.target.value)} id="">
                             <option value="select-type">select</option>
@@ -60,7 +77,7 @@ function PayChoice({ value, setValue }) {
                     </div>
 
                     <div> Send order for approval
-                        <button onClick={() => sessionStorage.setItem('user', JSON.stringify(orderObj))}>Place order</button>
+                        <button onClick={() => sendingForApproval()}>Place order</button>
                     </div>
                 </div>
                 <img id='pay-choice-grid-stadium' src="http://www.tothe92.co.uk/groundguide/images/stadiumlayout/wembleystadia.jpg" alt="" />
@@ -112,9 +129,15 @@ function PayChoice({ value, setValue }) {
                         </tbody>
                     </table>
                 </div>
-
             </div>
-
+                <div className='pay-buttons'>
+                    <button>Back</button>
+                    {approved === true ?
+                        <Link to={"/PayOrder"}><button>Next</button></Link>
+                        :
+                        <button onClick={() => alert("Please send order for approval")}>Next</button>
+                    }
+                </div>
         </div>
     )
 }

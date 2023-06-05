@@ -4,23 +4,40 @@ import { useState } from 'react'
 const SignUp = () => {
   const [newUserName, setNewUserName] = useState("")
   const [newUserPassword, setNewUserPassword] = useState("")
+  
 
+  const convertPassword=[]
   function anigma() {
     let randomKey = Math.floor(Math.randomm() * 5)
+    const splitedPassword=newUserPassword.split("")
     if (randomKey === 0) {
-      for (let i = 0; i < newUserPassword.length; i++) {
-
+      for (let i=0 ; i<splitedPassword.length-1 ; i++){
+        convertPassword.push(splitedPassword.charCodeAt(i)+4)
       }
+      convertPassword.push(randomKey)
     } else if (randomKey === 1) {
-
+      for (let i=0 ; i<splitedPassword.length-1 ; i++){
+        convertPassword.push(splitedPassword.charCodeAt(i)+ 10)
+      }
+      convertPassword.push(randomKey)
     } else if (randomKey === 3) {
-
+      for (let i=0 ; i<splitedPassword.length-1 ; i++){
+        convertPassword.push(splitedPassword.charCodeAt(i)+14)
+      }
+      convertPassword.push(randomKey)
     } else if (randomKey === 4) {
-
+      for (let i=0 ; i<splitedPassword.length-1 ; i++){
+        convertPassword.push(splitedPassword.charCodeAt(i)-3)
+      }
+      convertPassword.push(randomKey)
     } else if (randomKey === 5) {
-
+      for (let i=0 ; i<splitedPassword.length-1 ; i++){
+        convertPassword.push(splitedPassword.charCodeAt(i)-10)
+      }
+      convertPassword.push(randomKey)
     }
   }
+  
   const newUser = {
     userName: newUserName,
     userPassword: newUserPassword

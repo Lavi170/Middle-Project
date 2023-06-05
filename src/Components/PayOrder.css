@@ -3,9 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+#pay-order-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#pay-order-window{
+    position: absolute;
+    top: 30vh;
+    width: 80%;
+    height: 60%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+}
+
 
 #pay-order-conclution{
     border: 1px solid black;
-    width: 100%;
+    width: 80%;
     padding: 15px;
+    margin-bottom: 10px;
 }

@@ -4,12 +4,25 @@
     box-sizing: border-box;
 }
 
+
+#pay-choice-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 #pay-choice-grid{
+    position: absolute;
+    top: 30vh;
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr ;
-    width: 90%;
-    height: 95%;
+    width: 80%;
+    height: 60%;
+    border: 1px solid black;
+    padding: 5px;
 }
 
 #pay-choice-grid-choose{
@@ -50,6 +63,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#pay-chice-grid-buttons{
+    grid-row-start: 3 ;
+    grid-row-end: 4 ;
+    grid-column-start: 1 ;
+    grid-column-end: 3 ;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    
 }
 
 #pay-choice-grid-prices table{
