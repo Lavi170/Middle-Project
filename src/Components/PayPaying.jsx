@@ -11,9 +11,9 @@ function PayPaying({ value, setValue }) {
   let [enteredCVC, setEnteredCVC] = useState(false);
   let [madeTransact, setMadeTransact] = useState(false)
 
-  const creditInfo={
-    name:
-  }
+  // const creditInfo={
+  //   name:
+  // }
 
   function tryToTransact() {
     if (enteredName == true && enteredNumber == true && enteredDate == true && enteredCVC == true) {
