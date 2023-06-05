@@ -3,7 +3,9 @@ import "./PayChoice.css"
 import "./PaymentProcess.css"
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import { useParams } from 'react-router-dom'
+import { useEffect } from 'react'
+import data from "./data.json"
 
 function PayChoice({ value, setValue }) {
     let [stadiumStand, setStadiumStand] = useState("")
@@ -11,6 +13,13 @@ function PayChoice({ value, setValue }) {
     let [ticketType, setTIcketType] = useState("")
     let [numberOfTickets, setNumberOfTickets] = useState(0)
     let [approved, setApproved] = useState(false)
+    let [wantedGame, setWantedGame] = useState(JSON.parse(localStorage.getItem("chosenGame")))
+    let [itemOfGame, setItemOfGame] = useState(data.results)
+    let [arrayOfItemOfGame, setArrayOfItemOfGame] = []
+
+    useEffect(() => {
+        setItemOfGame(data.results.filter(item => item.team === wantedGame.homeTeam))
+    }, [wantedGame])
 
     let orderObj = {
         "stand": stadiumStand,
@@ -20,23 +29,28 @@ function PayChoice({ value, setValue }) {
     }
 
     function sendingForApproval() {
-        console.log("hello world ");
         setApproved(true)
         sessionStorage.setItem('user', JSON.stringify(orderObj))
     }
 
+
     return (
         <div id='pay-choice-page'>
-                <div id="payment-process">
-                    <div className="half-process-ball" id="process-first-ball">Choose</div>
-                    <div className="grey-process-bar" id="process-first-bar"></div>
-                    <div className="grey-process-ball" id="process-second-ball">Order</div>
-                    <div className="grey-process-bar" id="process-second-bar"></div>
-                    <div className="grey-process-ball" id="process-third-ball">Payment</div>
-                    <div className="grey-process-bar" id="process-third-bar"></div>
-                    <div className="grey-process-ball" id="process-fourth-ball">Receipt</div>
-                </div>
+            <div id="payment-process">
+                <div className="half-process-ball" id="process-first-ball">Choose</div>
+                <div className="grey-process-bar" id="process-first-bar"></div>
+                <div className="grey-process-ball" id="process-second-ball">Order</div>
+                <div className="grey-process-bar" id="process-second-bar"></div>
+                <div className="grey-process-ball" id="process-third-ball">Payment</div>
+                <div className="grey-process-bar" id="process-third-bar"></div>
+                <div className="grey-process-ball" id="process-fourth-ball">Receipt</div>
+            </div>
             <div id='pay-choice-grid'>
+                <div id='pay-choice-grid-game-info'>
+                    <h3 className='game-info'>{wantedGame.homeTeam} VS.  {wantedGame.awayTeam}</h3>
+                    <h4 className='game-info'>Date:{wantedGame.date}</h4>
+                    <h4 className='game-info'>Stadium:{itemOfGame[0].stadium}</h4>
+                </div>
                 <div id='pay-choice-grid-choose'>
                     <h1>Choose tickets</h1>
 
@@ -73,8 +87,9 @@ function PayChoice({ value, setValue }) {
                             (<div id='pay-choice-tickets-pick'> Choose number of tickets
                                 <input onChange={() => (setNumberOfTickets(event.target.value))} type="number" min="0" max="15" onKeyPress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" />
                             </div>) : (null)}
-
                     </div>
+
+                    <button onClick={() => console.log(itemOfGame[0].ticketPrice1)}>click</button>
 
                     <div> Send order for approval
                         <button onClick={() => sendingForApproval()}>Place order</button>
@@ -99,45 +114,45 @@ function PayChoice({ value, setValue }) {
                             <tr>
                                 <td>single ticket</td>
                                 <td>bronze</td>
-                                <td>price</td>
+                                <td>{itemOfGame[0].ticketPrice3}</td>
                             </tr>
                             <tr>
                                 <td>single ticket</td>
                                 <td>silver</td>
-                                <td>price</td>
+                                <td>{itemOfGame[0].ticketPrice2}</td>
                             </tr>
                             <tr>
                                 <td>single ticket</td>
                                 <td>gold</td>
-                                <td>price</td>
+                                <td>{itemOfGame[0].ticketPrice1}</td>
                             </tr>
                             <tr>
                                 <td>subscription</td>
                                 <td>bronze</td>
-                                <td>price</td>
+                                <td>{itemOfGame[0].subscriptionPrice3}</td>
                             </tr>
                             <tr>
                                 <td>subscription</td>
                                 <td>silver</td>
-                                <td>price</td>
+                                <td>{itemOfGame[0].subscriptionPrice2}</td>
                             </tr>
                             <tr>
                                 <td>subscription</td>
                                 <td>gold</td>
-                                <td>price</td>
+                                <td>{itemOfGame[0].subscriptionPrice1}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-                <div className='pay-buttons'>
-                    <button>Back</button>
-                    {approved === true ?
-                        <Link to={"/PayOrder"}><button>Next</button></Link>
-                        :
-                        <button onClick={() => alert("Please send order for approval")}>Next</button>
-                    }
-                </div>
+            <div className='pay-buttons'>
+                <button>Back</button>
+                {approved === true ?
+                    <Link to={"/PayOrder"}><button>Next</button></Link>
+                    :
+                    <button onClick={() => alert("Please send order for approval")}>Next</button>
+                }
+            </div>
         </div>
     )
 }
