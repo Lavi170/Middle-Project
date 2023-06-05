@@ -45,7 +45,6 @@
     right: 19%;
     top: 50%;
     display: flex;
-    align-content: space-around;
     flex-wrap: wrap;
     overflow-y: auto;
     flex-direction: row;
@@ -88,7 +87,7 @@
     right: 59%;
     top: 50%;
     display: flex;
-    align-content: space-around;
+    align-content: stretch;
     flex-wrap: wrap;
     overflow-y: auto;
     justify-content: space-around;
