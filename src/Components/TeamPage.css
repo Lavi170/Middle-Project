@@ -68,6 +68,7 @@
 .game-info {
   margin-top: 5px;
   text-align: center;
+  color: black;
 }
 
 .team-page-text-in-pic2 {
@@ -95,3 +96,39 @@
     font-size: large;
     color: aliceblue;
 }
+@media (max-width: 700px) {
+  .game-info{
+    font-size: small;
+  }
+  .team-page-text-in-pic2{
+    font-size: 22px;
+  }
+}
+@media (max-width: 578px) {
+  .game-info{
+    font-size: 12px;
+  }
+  .team-page-text-in-pic2{
+    font-size: 18px;
+  }
+}
+@media (max-width: 410px) {
+  .game-info{
+    font-size: 9px;
+  }
+  .team-page-text-in-pic2{
+    font-size: 14px;
+    top: 45%;
+  }
+  .team-discription{
+    font-size: 11px;
+  }
+  
+}
+
+
+
+
+
+
+

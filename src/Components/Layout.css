@@ -1,119 +1,167 @@
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    min-height: 87.9vh;
-    height: auto;
-    height: auto;
-    position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 87.9vh;
+  height: auto;
+  height: auto;
+  position: relative;
 }
 
 .login-signup {
-    width: 6vw;
-    height: 5vh;
-    border-radius: 40px;
-    border: 0;
-    background-color: rgb(47, 155, 255);
-    color: black;
-    cursor: pointer;
+  width: 6vw;
+  height: 5vh;
+  border-radius: 40px;
+  border: 0;
+  background-color: rgb(47, 155, 255);
+  color: black;
+  cursor: pointer;
 }
 
 .login-signup:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
-#user-signed-in{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
+#user-signed-in {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
 }
 .nav-bar {
-    width: 100%;
-    height: 14vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: snow;
+  width: 100%;
+  height: 14vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: snow;
 }
 
 .right-side-nav-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
 }
 
 .nav-link {
-    position: relative;
-    width: 7vw;
-    height: 5vh;
-    font-size: x-large;
-    text-align: center;
-    font-family: sans-serif;
-    color: rgb(0, 0, 0);
+  position: relative;
+  width: 7vw;
+  height: 5vh;
+  font-size: x-large;
+  text-align: center;
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  transition: transform 0.3s ease-in-out;
 }
 
-#user-signed-in{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
+.nav-link:hover {
+  transform: scale(1.1);
+}
+
+#user-signed-in {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
 }
 
 #nav-logo {
-    background-color: white;
-    color: black;
-    height: 5.5vw;
+  background-color: white;
+  color: black;
+  height: 5.5vw;
 }
 
 a:link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:visited {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #Layout-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 90px;
-    background: rgb(154, 0, 0);
-    background: linear-gradient(180deg, rgba(154, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 1) 100%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    margin-bottom: -80px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(5, 84, 94, 1) 16%,
+    #bbb 91.1%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: -80px;
 }
 
 #layout-footer-left {
-    display: flex;
-    justify-content: space-evenly;
-    width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
 }
 
 .layout-footer-left-links {
-    text-decoration: none;
-    color: snow;
-    font-size: x-large;
+  text-decoration: none;
+  color: snow;
+  font-size: x-large;
 }
 
 #layout-footer-right {
-    display: flex;
-    justify-content: space-evenly;
-    width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
 }
 
 .layout-footer-right-links {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .layout-footer-right-pictures {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+@media (max-width: 800px) {
+  .login-signup {
+    font-size: 11px;
+  }
+  .nav-link {
+    font-size: 18px;
+  }
+}
+@media (max-width: 580px) {
+  .login-signup {
+    font-size: 9px;
+  }
+  .nav-link {
+    font-size: 16px;
+  }
+  #nav-logo{
+height: 25px;
+margin-bottom: 8px;
+  }
+}
+@media (max-width: 470px) {
+    .nav-link{
+        font-size: 13px;
+    }
+#nav-logo{
+    height: 18px;
+    margin-bottom: 15px;
+}
+}
+@media (max-width: 390px) {
+  .login-signup {
+    font-size: 7px;
+  }
+  .nav-link{
+    font-size: 11px;
+  }
+  #nav-logo{
+   visibility: none;
+   margin-left: 9px;
+  }
 }

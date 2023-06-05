@@ -35,7 +35,7 @@ function Layout() {
                         Calender
                     </Link>
 
-                    <img id="nav-logo" src="src/pictures/middle-project-logo.png" alt="" />
+                    <img id="nav-logo" src="src/pictures/final-logo.png" alt="" />
 
                     <Link className="nav-link" to={"Teams"}>
                         Teams
