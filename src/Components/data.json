@@ -349,7 +349,6 @@
         "homeGames":[
           { "homeTeam": "Hapoel Haifa" , "awayTeam": "Maccabi Haifa" , "date":"2023-10-10"},
           { "homeTeam": "Hapoel Haifa" , "awayTeam": "Maccabi Tel Aviv" , "date":"2024-05-02"},
-          { "homeTeam": "Hapoel Haifa" , "awayTeam": "Maccabi Tel Aviv" , "date":"2024-05-02"},
           { "homeTeam": "Hapoel Haifa" , "awayTeam": "Hapoel Be'er Sheva" , "date":"2023-07-02"},       
           { "homeTeam": "Hapoel Haifa" , "awayTeam": "Maccabi Netanya" , "date":"2023-07-23"},
           { "homeTeam": "Hapoel Haifa" , "awayTeam": "Hapoel Jerusalem" , "date":"2023-11-15"},
@@ -484,7 +483,6 @@
         "maincolor": "red",
         "homeGames":[
           { "homeTeam": "Hapoel Tel-Aviv" , "awayTeam": "Maccabi Haifa" , "date":"2024-01-10"},
-          { "homeTeam": "Hapoel Tel-Aviv" , "awayTeam": "Maccabi Tel Aviv" , "date":"2024-05-16"},
           { "homeTeam": "Hapoel Tel-Aviv" , "awayTeam": "Maccabi Tel Aviv" , "date":"2024-05-16"},
           { "homeTeam": "Hapoel Tel-Aviv" , "awayTeam": "Hapoel Be'er Sheva" , "date":"2023-10-26"},    
           { "homeTeam": "Hapoel Tel-Aviv" , "awayTeam": "Maccabi Netanya" , "date":"2024-04-09"},       

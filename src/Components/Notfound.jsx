@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const Notfound = () => {
+const NotFound = () => {
   return (
-    <div>Notfound</div>
-  )
-}
+    <div>
+      <img
+        height="100%"
+        width="100%"
+        src="https://cdn.mos.cms.futurecdn.net/PuXipAW3AXUzUJ4uYyxPKC-1200-80.jpg"
+        alt=""
+      />
+    </div>
+  );
+};
 
-export default Notfound
+export default NotFound;

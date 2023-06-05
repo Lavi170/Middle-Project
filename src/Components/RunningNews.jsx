@@ -9,6 +9,7 @@ const RunningNews = () => {
     'ראשוני: סכנין ובירם כיאל במשא ומתן מתקדם להארכת חוזה',
     'המחאה נגד קראנקה נמשכת: שלט ענק בספרדית הונף בקריית שלום',
     'באה לחגוג: מכבי חיפה פירקה 5-0 את הפועל ירושלים',
+    'התובע דורש: 2 נקודות הפחתה למכבי חיפה'
   ];
 
   useEffect(() => {
@@ -18,7 +19,7 @@ const RunningNews = () => {
       setCurrentNewsIndex((prevIndex) =>
         (prevIndex + 1) % newsData.length
       );
-    }, 3000);
+    }, 4000);
 
     return () => {
       clearInterval(interval);

@@ -42,7 +42,7 @@ console.log(away);
         <br />
         <br />
         <div className="buttons">
-          <Link to="/payment" className="buy-tickets-button">
+          <Link to="/PayChoice" className="buy-tickets-button">
             Buy Tickets Now
           </Link>
           <Link to="/" className="go-back-button">
