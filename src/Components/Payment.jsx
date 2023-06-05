@@ -18,7 +18,7 @@ function Payment({ value, setValue }) {
         } else if (pageNumber === 4) {
             setRelleventPath("/Payment/PayReceipt")
         } else if (pageNumber === 5) {
-            setRelleventPath("/HomePage")
+            setRelleventPath("/")
         } else if (pageNumber === 6) {
             setPageNumber(1)
         } else {
