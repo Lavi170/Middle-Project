@@ -18,16 +18,30 @@
     top: 30vh;
     display: grid;
     grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr ;
+    grid-template-rows: 0.5fr 0.5fr  1fr ;
     width: 80%;
     height: 60%;
     border: 1px solid black;
     padding: 5px;
 }
 
-#pay-choice-grid-choose{
+#pay-choice-grid-game-info{
     grid-row-start: 1 ;
-    grid-row-end: 3 ;
+    grid-row-end: 2 ;
+    grid-column-start: 1 ;
+    grid-column-end: 2 ;  
+    display: flex;
+    align-items: center;
+    justify-content: start;  
+    flex-direction: column;
+}
+.game-info{
+    text-decoration: underline;
+}
+
+#pay-choice-grid-choose{
+    grid-row-start: 2 ;
+    grid-row-end: 4 ;
     grid-column-start: 1 ;
     grid-column-end: 2 ;
     background-color: pink;
@@ -43,10 +57,13 @@
 }
 #pay-choice-grid-stadium{
     grid-row-start: 1 ;
-    grid-row-end: 2 ;
+    grid-row-end: 3 ;
     grid-column-start: 2 ;
     grid-column-end: 3 ;
     background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #pay-choice-grid-stadium {
@@ -55,24 +72,14 @@
 }
 
 #pay-choice-grid-prices{
-    grid-row-start: 2 ;
-    grid-row-end: 3 ;
+    grid-row-start: 3 ;
+    grid-row-end: 4 ;
     grid-column-start: 2 ;
     grid-column-end: 3 ;
     background-color: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-#pay-chice-grid-buttons{
-    grid-row-start: 3 ;
-    grid-row-end: 4 ;
-    grid-column-start: 1 ;
-    grid-column-end: 3 ;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    
 }
 
 #pay-choice-grid-prices table{

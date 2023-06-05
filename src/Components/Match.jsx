@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 
 function Match({ value, currentTeam }) {
+  
+
   let { currentdate } = useParams();
   const [match, setMatch] = useState(
     JSON.parse(localStorage.getItem("currentMatch")) || {}
@@ -17,6 +19,7 @@ function Match({ value, currentTeam }) {
       );
       setMatch(currentGame);
       localStorage.setItem("currentMatch", JSON.stringify(currentGame));
+      localStorage.setItem("chosenGame", JSON.stringify(currentGame));
     }
     return () => {
       localStorage.removeItem("currentMatch");
@@ -24,7 +27,6 @@ function Match({ value, currentTeam }) {
   }, []);
   const away = value?.find((item) => item.team === match.awayTeam);
 console.log(away);
-//   console.log(away.striker);
   return (
     <div style={{ backgroundImage: `url(../../${currentTeam.backroundPic})` }}>
       <div className="header">
@@ -42,8 +44,9 @@ console.log(away);
         <br />
         <br />
         <div className="buttons">
-          <Link to="/PayChoice" className="buy-tickets-button">
-            Buy Tickets Now
+          <Link to={`/PayChoice`} className="buy-tickets-button">
+            <button onClick={()=>localStorage.setItem("chosenMatch" , )}>Buy Tickets Now</button>  
+            
           </Link>
           <Link to="/" className="go-back-button">
             Home

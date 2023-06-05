@@ -26,7 +26,7 @@ import RunningNews from './RunningNews'
 
 function App() {
   const [currentTeam, setcurrentTeam] = useState();
-   localStorage.setItem("logged-user", null)
+  localStorage.setItem("logged-user", null)
 
   const [mainData, SetmainData] = useState([]);
   useEffect(() => {
@@ -39,7 +39,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<HomePage value={mainData} setValue={SetmainData} />}></Route>
-          <Route path='Teams/:teamname/:currentdate' element={<Match currentTeam={currentTeam} value={mainData} setValue={SetmainData}/>}></Route>
+          <Route path='Teams/:teamname/:currentdate' element={<Match currentTeam={currentTeam} value={mainData} setValue={SetmainData} />}></Route>
+            {/* <Route path='paychoice' element={<PayChoice setcurrentTeam={setcurrentTeam} currentTeam={currentTeam} value={mainData} setValue={SetmainData} />} /> */}
           <Route path='/CalendarComponent' element={<CalendarComponent value={mainData} setValue={SetmainData} />}></Route>
           <Route path="/Teams" element={<Teams value={mainData} setValue={SetmainData} />}></Route>
           <Route
