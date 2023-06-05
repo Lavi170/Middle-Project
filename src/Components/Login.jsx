@@ -5,11 +5,11 @@ const Login = () => {
   const [nameEntered, setNameEntered] = useState("")
   const [passwordEntered, setPasswordEntered] = useState("")
   const [loggedIn, setLoggedIn] = useState(localStorage.getItem("status"));
-  const [loggedUser, setLoggedUser] = useState()
-
+  const [loggedUser, setLoggedUser] = useState(null)
   useEffect(() => {
-    localStorage.setItem("Logged", nameEntered)
+    localStorage.setItem("Logged", loggedUser)
   }, loggedUser)
+
 
   localStorage.setItem("status", loggedIn)
   function tryToLogin() {
@@ -20,10 +20,8 @@ const Login = () => {
       if (localStorage.getItem(nameEntered) === passwordEntered) {
         alert("Loged in successfully! Enjoy your game!")
         setLoggedIn(true);
-        localStorage.setItem("status", loggedIn)
         setLoggedUser(nameEntered)
-        console.log(loggedUser);
-
+        window.location.reload();
       } else {
         alert("User name or password are wrong")
       }

@@ -14,7 +14,6 @@ import SignUp from './SignUp'
 import UserPage from './UserPage'
 import ContactUs from "./ContactUs";
 import TeamPage from "./TeamPage";
-import Payment from './Payment';
 import PayChoice from './PayChoice';
 import PayOrder from './PayOrder';
 import PayPaying from './PayPaying';
@@ -26,7 +25,8 @@ import RunningNews from './RunningNews'
 
 
 function App() {
-  const [currentTeam, setcurrentTeam] = useState();  localStorage.setItem("logged-user" , null)
+  const [currentTeam, setcurrentTeam] = useState();
+   localStorage.setItem("logged-user", null)
 
   const [mainData, SetmainData] = useState([]);
   useEffect(() => {
@@ -46,19 +46,16 @@ function App() {
             path="Teams/:teamname"
             element={<TeamPage setcurrentTeam={setcurrentTeam} currentTeam={currentTeam} value={mainData} setValue={SetmainData} />}
           ></Route>
-            <Route path='/About' element={<About />}></Route>
-            <Route path='/news' element={<News />}></Route>
-            <Route path="/contactus" element={<ContactUs />}></Route>
-            <Route element={<RunningNews></RunningNews>}></Route>
-            <Route path='/Payment' element={<Payment />}>
-              <Route index element={<PayChoice />}></Route>
-              <Route path='PayChoice' element={<PayChoice />}></Route>
-              <Route path='PayOrder' element={<PayOrder />}></Route>
-              <Route path='PayPaying' element={<PayPaying />}></Route>
-              <Route path='PayReceipt' element={<PayReceipt />}></Route>
-            </Route>
-            <Route path='*' element={<Notfound />}></Route>
-            <Route path='userpage' element={<UserPage />}>
+          <Route path='/About' element={<About />}></Route>
+          <Route path='/news' element={<News />}></Route>
+          <Route path="/contactus" element={<ContactUs />}></Route>
+          <Route element={<RunningNews></RunningNews>}></Route>
+          <Route path='PayChoice' element={<PayChoice />}></Route>
+          <Route path='PayOrder' element={<PayOrder />}></Route>
+          <Route path='PayPaying' element={<PayPaying />}></Route>
+          <Route path='PayReceipt' element={<PayReceipt />}></Route>
+          <Route path='*' element={<Notfound />}></Route>
+          <Route path='userpage' element={<UserPage />}>
             <Route path="" element={<Login />}></Route>
             <Route path='signup' element={<SignUp />}></Route>
           </Route>
