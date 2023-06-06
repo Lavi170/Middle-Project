@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 function Match({ value, currentTeam }) {
-  
+
 
   let { currentdate } = useParams();
   const [match, setMatch] = useState(
@@ -26,7 +26,7 @@ function Match({ value, currentTeam }) {
     };
   }, []);
   const away = value?.find((item) => item.team === match.awayTeam);
-console.log(away);
+  console.log(away);
   return (
     <div style={{ backgroundImage: `url(../../${currentTeam.backroundPic})` }}>
       <div className="header">
@@ -37,22 +37,25 @@ console.log(away);
       <br />
       <br />
       <div>
-      <div className="content">
-        <div className="venue">
-          <h2 className="date-headline">On The {match.date}</h2>
+        <div className="content">
+          <div className="venue">
+            <h2 className="date-headline">On The {match.date}</h2>
+          </div>
+          <br />
+          <br />
+          <div className="buttons">
+            {localStorage.getItem("status") == "true" ?
+              <Link to={`/PayChoice`}>
+                <button className="buy-tickets-button" onClick={() => localStorage.setItem("chosenMatch",)}>Buy Tickets Now</button>
+              </Link>
+              :
+              <button className="go-back-button" onClick={() => alert("Please sing up before making a purchase")}>Buy Tickets Now</button>
+            }
+            <Link to="/" className="go-back-button">
+              Home
+            </Link>
+          </div>
         </div>
-        <br />
-        <br />
-        <div className="buttons">
-          <Link to={`/PayChoice`} className="buy-tickets-button">
-            <button onClick={()=>localStorage.setItem("chosenMatch" , )}>Buy Tickets Now</button>  
-            
-          </Link>
-          <Link to="/" className="go-back-button">
-            Home
-          </Link>
-        </div>
-      </div>
 
       <div className="lineups">
         <div className="team-lineup">
