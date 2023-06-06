@@ -11,6 +11,99 @@
     flex-direction: column;
 }
 
+#pay-paying-card-container{
+    position: absolute;
+    top: 30vh;
+    border: 1px solid black;
+    width: 80%;
+    height: 60%;
+    padding: 10px;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.rccs__card--front{
+    width: 50vw;
+    max-width: 303px;
+    margin-left: auto;
+    height: 20vh;
+}
+.rccs__card--back{
+    width: 50vw;
+    max-width: 303px;
+    margin-left: auto;
+    height: 20vh;
+}
+
+#pay-paying-card-name{
+    width: 50%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+input{
+  width: 30% ;
+  height: 20px ;
+}
+@media ( max-width: 800px) {
+    .rccs__card--front{
+        width: 50vw;
+        max-width: 303px;
+        margin-left: auto;
+        height: 20vh;
+    }
+    .rccs__card--back{
+        width: 50vw;
+        max-width: 303px;
+        margin-left: auto;
+        height: 20vh;
+    }
+    
+}
+@media ( max-width: 430px) {
+    .rccs__card--front{
+        width: 55vw;
+        max-width: 303px;
+        margin-left: auto;
+        height: 18vh;
+    }
+    .rccs__card--back{
+        width: 55vw;
+        max-width: 303px;
+        margin-left: auto;
+        height: 18vh;
+    } 
+}
+@media ( max-width: 230px) {
+    .rccs__card--front{
+        display: none;
+    }
+    .rccs__card--back{
+        display: none;
+    }  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #pay-paying-grid{
     position: absolute;
     top: 30vh;

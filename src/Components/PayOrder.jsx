@@ -21,12 +21,12 @@ function PayOrder({ value, setValue }) {
       </div>
 
       <div id='pay-order-window'>
-        The order you placed-
+        <h3>The order you placed-</h3>
         <div id='pay-order-conclution' >
           {(theOrder.deal == "single") ? (`${theOrder.amount} tickets `) : (null)}
           {(theOrder.deal == "subscription") ? (`${theOrder.deal} `) : (null)}
-          of {theOrder.type} type in the {theOrder.stand} stand <br />
-          for the price of-
+          of {theOrder.type} type in the {theOrder.stand} stand
+          for the price of- {theOrder.price} shekels.
         </div>
         <div>
           <input onChange={() => setTermsOfUse(!termsOfUse) + console.log(termsOfUse)} type="checkbox" id="" /> I consent to costumer terms of use. <br />
