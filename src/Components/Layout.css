@@ -112,6 +112,7 @@ a:visited {
 #layout-footer-right {
   display: flex;
   justify-content: space-evenly;
+  margin-right: 15px;
 }
 
 .layout-footer-right-links {
