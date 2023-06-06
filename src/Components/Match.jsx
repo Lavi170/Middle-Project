@@ -69,6 +69,7 @@ console.log(away);
             <li>{`cb: ${currentTeam.cb1}`}</li>
             <li>{`cb: ${currentTeam.cb2}`}</li>
             <li>{`rb: ${currentTeam.rb}`}</li>
+            <li>{`gk: ${currentTeam.gk}`}</li>
           </ul>
         </div>
         <div className="team-lineup">
@@ -85,6 +86,7 @@ console.log(away);
             <li>{`cb: ${away?.cb1}`}</li>
             <li>{`cb: ${away?.cb2}`}</li>
             <li>{`rb: ${away?.rb}`}</li>
+            <li>{`gk: ${away?.gk}`}</li>
           </ul>
         </div>
       </div>
