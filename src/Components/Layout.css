@@ -112,7 +112,6 @@ a:visited {
 #layout-footer-right {
   display: flex;
   justify-content: space-evenly;
-  width: 30%;
 }
 
 .layout-footer-right-links {
@@ -130,6 +129,15 @@ a:visited {
   }
   .nav-link {
     font-size: 18px;
+
+  }
+  .layout-footer-left-links{
+    font-size: 20px;
+    text-align: center;
+  }
+  .layout-footer-right-pictures{
+    height: 40px;
+    width: 40px;
   }
 }
 @media (max-width: 580px) {
@@ -142,6 +150,14 @@ a:visited {
   #nav-logo{
 height: 25px;
 margin-bottom: 8px;
+  }
+  .layout-footer-left-links{
+    font-size: 16px;
+    text-align: center;
+  }
+  .layout-footer-right-pictures{
+    height: 30px;
+    width: 30px;
   }
 }
 @media (max-width: 470px) {
@@ -163,5 +179,13 @@ margin-bottom: 8px;
   #nav-logo{
    visibility: none;
    margin-left: 9px;
+  }
+  .layout-footer-left-links{
+    font-size: 13px;
+    text-align: center;
+  }
+  .layout-footer-right-pictures{
+    height: 27px;
+    width: 27px;
   }
 }

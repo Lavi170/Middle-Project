@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import video from "/src/pictures/hero-section-video.mp4";
 import "./HomePage.css";
 import Carousel1 from "./Carousel1";
@@ -104,56 +104,21 @@ function HomePage({ value, setValue }) {
 
           <div id="home-contact-us"><ContactUs /></div>
 
-
-          {data.results.map((team, index) => (
-            <div key={index} id="home-next-games">
-              Next games for {team.team}
-              {team.homeGames.map((game, index) => (
-                <div key={index}>
-                  <span>Home team: {game.homeTeam}</span>
-                  <span>Away team: {game.awayTeam}</span>
-                  <span>Date: {game.date}</span>
-                </div>
-              ))}
-            </div>
-          ))}
-          {/* <div id="home-next-games">
-            Next games
-            {data.results[0].homeGames.map((item, index) => (
-              <div key={index}>
-                <span>Home team: {item.homeTeam}</span>
-                <span>Away team: {item.awayTeam}</span>
-                <span>Date: {item.date}</span>
-              </div>
-            ))}
-          </div> */}
-
-          {/* <div id="home-next-games">next games
-            {data.results.map((result) => {
-              result.homeGames.map((item, index) => (
-                  <div key={index}>
-                    <span>Home team: {item.homeTeam}</span>
-                    <span>Away team: {item.awayTeam}</span>
-                    <span>Date: {item.date}</span>
-                  </div>
-                
-              ))
-            })}
-          </div> */}
-          {/* {
-                  value[0].homeGames.map((item, index) => {
-                    let { homeTeam, awayTeam, date, } = item
-                    return (
-                      <div id={`game-number-${index}`} key={index}>
-                        <span>Home team: {homeTeam}</span>
-                        <span>Away team: {awayTeam}</span>
-                        <span>Date: {date}</span>
-                      </div>
-                    )
-
-                  })
-                } */}
-          {/* </div> */}
+<div id="home-commercials">
+  <div className="commercial-block">
+   <a href="https://en.wikipedia.org/wiki/Patio"> <img src="src/pictures/ad1.jpg" alt="Advertisement" /> </a>
+    <p>Too hot to sit in the patio? Buy our shade nets now!</p>
+  </div>
+  <div className="commercial-block">
+   <a href="https://www.10bis.co.il/next/restaurants/menu/delivery/2612/%D7%A9%D7%95%D7%9E%D7%A9%D7%95%D7%9D-%D7%91%D7%A8-%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA"><img src="src/pictures/ad2.jpg" alt="Advertisement" /> </a> 
+    <p>Cant find a job? SUMSUM!</p>
+  </div>
+  <div className="commercial-block">
+   <a href="https://cyberpro-israel.co.il/%d7%90%d7%96-%d7%9b%d7%99%d7%a6%d7%93-%d7%91%d7%95%d7%97%d7%a8%d7%99%d7%9d-%d7%a7%d7%95%d7%a8%d7%a1-%d7%a1%d7%99%d7%99%d7%91%d7%a8/"><img src="src/pictures/ad3.jpg" alt="Advertisement" /> </a> 
+    <p>Are you still programing? Dont be a clown! Come be a cyber attacker and make 30k!</p>
+  </div>
+</div>
+          
         </div>
       </div >
     </>
