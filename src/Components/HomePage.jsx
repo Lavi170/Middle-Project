@@ -2,7 +2,6 @@ import React from "react";
 import video from "/src/pictures/hero-section-video.mp4";
 import "./HomePage.css";
 import Carousel1 from "./Carousel1";
-import "./carousel.css";
 import { Link } from "react-router-dom";
 import RunningNews from "./RunningNews";
 import CalendarComponent from "./CalendarComponent";
