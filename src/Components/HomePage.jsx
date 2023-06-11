@@ -110,11 +110,11 @@ function HomePage({ value, setValue }) {
     <p>Too hot to sit in the patio? Buy our shade nets now!</p>
   </div>
   <div className="commercial-block">
-   <a href="https://www.10bis.co.il/next/restaurants/menu/delivery/2612/%D7%A9%D7%95%D7%9E%D7%A9%D7%95%D7%9D-%D7%91%D7%A8-%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA"><img src="src/pictures/ad2.jpg" alt="Advertisement" /> </a> 
+   <a href="https://www.10bis.co.il/next/restaurants/menu/delivery/2612/%D7%A9%D7%95%D7%9E%D7%A9%D7%95%D7%9D-%D7%91%D7%A8-%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA"><img src="src/pictures/add2.jpg" alt="Advertisement" /> </a> 
     <p>Cant find a job? SUMSUM!</p>
   </div>
   <div className="commercial-block">
-   <a href="https://cyberpro-israel.co.il/%d7%90%d7%96-%d7%9b%d7%99%d7%a6%d7%93-%d7%91%d7%95%d7%97%d7%a8%d7%99%d7%9d-%d7%a7%d7%95%d7%a8%d7%a1-%d7%a1%d7%99%d7%99%d7%91%d7%a8/"><img src="src/pictures/ad3.jpg" alt="Advertisement" /> </a> 
+   <a href="https://cyberpro-israel.co.il/%d7%90%d7%96-%d7%9b%d7%99%d7%a6%d7%93-%d7%91%d7%95%d7%97%d7%a8%d7%99%d7%9d-%d7%a7%d7%95%d7%a8%d7%a1-%d7%a1%d7%99%d7%99%d7%91%d7%a8/"><img src="src/pictures/add3.jpg" alt="Advertisement" /> </a> 
     <p>Are you still programing? Dont be a clown! Come be a cyber attacker and make 30k!</p>
   </div>
 </div>

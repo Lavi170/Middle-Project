@@ -6,48 +6,47 @@ const SignUp = () => {
   const [newUserPassword, setNewUserPassword] = useState("")
   const [potato ,setPotato]=useState("")
 
-  function anigma() {
+  function anigma(passwordToConvert) {
     const convertPassword = []
     const newEncryptedPassword = []
     let splitedPassword;
     let randomKey = Math.floor(Math.random() * 5)
-    splitedPassword = newUserPassword.split("")
+    
+    splitedPassword = passwordToConvert.split("")
     if (randomKey === 0) {
-      for (let i = 0; i < splitedPassword.length - 1; i++) {
-        convertPassword.push(splitedPassword[i].charCodeAt(0) + 4)
+      for (let i = 0; i < splitedPassword.length; i++) {
+        convertPassword.push(splitedPassword[i].charCodeAt(0) - 4)
         newEncryptedPassword.push(String.fromCharCode(convertPassword[i]))
       }
       newEncryptedPassword.push(randomKey)
     } else if (randomKey === 1) {
-      for (let i = 0; i < splitedPassword.length - 1; i++) {
-        convertPassword.push(splitedPassword[i].charCodeAt(0) + 2)
+      for (let i = 0; i < splitedPassword.length; i++) {
+        convertPassword.push(splitedPassword[i].charCodeAt(0) - 2)
+        newEncryptedPassword.push(String.fromCharCode(convertPassword[i]))
+      }
+      newEncryptedPassword.push(randomKey)
+    } else if (randomKey === 2) {
+      for (let i = 0; i < splitedPassword.length; i++) {
+        convertPassword.push(splitedPassword[i].charCodeAt(0) -1)
         newEncryptedPassword.push(String.fromCharCode(convertPassword[i]))
       }
       newEncryptedPassword.push(randomKey)
     } else if (randomKey === 3) {
-      for (let i = 0; i < splitedPassword.length - 1; i++) {
-        convertPassword.push(splitedPassword[i].charCodeAt(0) +1)
+      for (let i = 0; i < splitedPassword.length; i++) {
+        convertPassword.push(splitedPassword[i].charCodeAt(0) -5)
         newEncryptedPassword.push(String.fromCharCode(convertPassword[i]))
       }
       newEncryptedPassword.push(randomKey)
     } else if (randomKey === 4) {
       for (let i = 0; i < splitedPassword.length - 1; i++) {
-        convertPassword.push(splitedPassword[i].charCodeAt(0) -1)
-        newEncryptedPassword.push(String.fromCharCode(convertPassword[i]))
-      }
-      newEncryptedPassword.push(randomKey)
-    } else if (randomKey === 5) {
-      for (let i = 0; i < splitedPassword.length - 1; i++) {
-        convertPassword.push(splitedPassword[i].charCodeAt(0) -1 )
+        convertPassword.push(splitedPassword[i].charCodeAt(0) -7 )
         newEncryptedPassword.push(String.fromCharCode(convertPassword[i]))
       }
       newEncryptedPassword.push(randomKey)
     }
-    // console.log(newEncryptedPassword);
-    // console.log(convertPassword);
-    setPotato(newEncryptedPassword.join(" "))
-    // setPotato(newEncryptedPassword)
-    // setPotato(newEncryptedPassword.join(""))
+    setNewUserPassword(newEncryptedPassword.join(" "))
+    console.log(newEncryptedPassword);
+    console.log(newUserPassword);
   }
 
   const newUser = {
@@ -59,13 +58,8 @@ const SignUp = () => {
     if (newUserName.length > 2) {
       if (localStorage.getItem(newUserName) === null) {
         if (newUserPassword.length > 5) {
-          anigma
-          console.log(potato);
-          // console.log(newEncryptedPassword);
           localStorage.setItem(newUserName, newUserPassword)
-          // console.log(splitedPassword);
-          console.log(newUserPassword);
-          // alert("Signed up successfully!")
+          // console.log(newUserPassword);
         } else {
           alert("Password too short, please enter a password atleast 6 chars long")
         }
@@ -86,9 +80,9 @@ const SignUp = () => {
           <input onChange={() => setNewUserName(event.target.value)} className='user-page-input' type="text" placeholder='Enter Username...' /></div>
         <div> Enter password with atleast 6 chars
           <br />
-          <input onChange={() => setNewUserPassword(event.target.value)} className='user-page-input' type="password" placeholder='Enter Password...' /></div>
+          <input onChange={() => anigma(event.target.value) } className='user-page-input' type="password" placeholder='Enter Password...' /></div>
         <div id='user-page-remember-me'>  <input type="checkbox" /><h6 id='user-page-h6'>Remember Me</h6></div>
-        <button onClick={() => anigma()+ checkAndSign()} className='user-page-button'>Submit</button>
+        <button onClick={() =>  checkAndSign()+console.log(newUserPassword)} className='user-page-button'>Submit</button>
         <h5>Already Have An Account? <a href="/userpage">Log In Here</a></h5>
       </div>
     </div>
